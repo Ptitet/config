@@ -1,8 +1,8 @@
 { config, lib, ... }:
 {
-  options.apps.steam.enable = lib.mkEnableOption "Enables Steam";
+  options.my.apps.steam.enable = lib.mkEnableOption "Enables Steam";
 
-  config = lib.mkIf config.apps.steam.enable {
+  config = lib.mkIf config.my.apps.steam.enable {
     programs.steam.enable = true;
   };
 }

@@ -15,22 +15,39 @@
   outputs =
     inputs@{ nixpkgs, ... }:
     let
-      system = "x86_64-linux";
-      pkgs = import nixpkgs {
-        inherit system;
-        config.allowUnfree = true;
+      nixosConfigurations = hosts: {
+        nixosConfigurations = builtins.listToAttrs (
+          map (
+            { name, system }:
+            let
+              pkgs = import nixpkgs {
+                inherit system;
+                config.allowUnfree = true;
+              };
+            in
+            {
+              inherit name;
+              value = nixpkgs.lib.nixosSystem {
+                inherit system pkgs;
+                specialArgs = { inherit inputs; };
+                modules = [
+                  ./hosts/common.nix
+                  ./hosts/${name}/configuration.nix
+                ];
+              };
+            }
+          ) hosts
+        );
       };
     in
-    {
-      nixosConfigurations = {
-        kompute = nixpkgs.lib.nixosSystem {
-          inherit system pkgs;
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./hosts/kompute/configuration.nix
-          ];
-        };
-      };
-      formatter.${system} = pkgs.nixfmt-rfc-style;
-    };
+    nixosConfigurations [
+      {
+        name = "kompute";
+        system = "x86_64-linux";
+      }
+      {
+        name = "raspberry";
+        system = "x86_64-linux";
+      }
+    ];
 }

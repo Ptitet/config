@@ -22,13 +22,13 @@
         "1.0.0.1"
       ];
     };
-    firewall.enable = false;
   };
 
   environment.systemPackages = with pkgs; [
     wget
     btop
     fzf
+    sops
   ];
   programs.zsh = {
     enable = true;

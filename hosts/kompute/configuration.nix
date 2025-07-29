@@ -1,14 +1,28 @@
 {
   pkgs,
   inputs,
+  config,
   ...
 }:
-{
+let
+  define-users = import ../define-users.nix { inherit inputs pkgs config; };
+in
+(define-users [
+  {
+    name = "jules";
+    description = "${config.networking.hostName}'s god";
+    groups = [
+      "wheel"
+      "networkmanager"
+    ];
+    shell = pkgs.zsh;
+  }
+])
+// {
   imports = [
     ../common.nix
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.default
-    ../../users/jules
+    inputs.home-manager.nixosModules.home-manager
     ./packages.nix
   ];
 

@@ -1,8 +1,8 @@
 { config, lib, ... }:
 {
-  options.apps.TEMPLATE.enable = lib.mkEnableOption "Enables TEMPLATE";
+  options.my.apps.TEMPLATE.enable = lib.mkEnableOption "Enables TEMPLATE";
 
-  config = lib.mkIf config.apps.TEMPLATE.enable {
+  config = lib.mkIf config.my.apps.TEMPLATE.enable {
 
   };
 }

@@ -6,6 +6,8 @@
       withUWSM = true;
       xwayland.enable = true;
     };
+    niri.enable = true;
+    steam.enable = true;
   };
   xdg.portal = {
     enable = true;

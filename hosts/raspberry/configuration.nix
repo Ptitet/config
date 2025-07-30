@@ -14,8 +14,8 @@ in
     shell = pkgs.zsh;
   }
 ])
-  {
-    imports = [ ];
+// {
+  imports = [ ];
 
-    networking.hostName = "raspberry";
-  }
+  networking.hostName = "raspberry";
+}

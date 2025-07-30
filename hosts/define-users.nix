@@ -2,7 +2,7 @@
   inputs,
   pkgs,
   config,
-}@args:
+}:
 users:
 let
   hostname = config.networking.hostName;
@@ -17,18 +17,7 @@ in
         { name, ... }:
         {
           inherit name;
-          value =
-            import ../users/${name} args # Base config shared among hosts
-            // import ../users/${name}/hosts/${hostname}.nix args # Host-specific config
-            // {
-              programs.home-manager.enable = true;
-              # Let Home Manager install and manage itself
-              home = {
-                username = name;
-                homeDirectory = "/home/${name}";
-                stateVersion = "25.05"; # Don't touch that
-              };
-            };
+          value = ../users/${name}/hosts/${hostname}.nix;
         }
       ) users
     );

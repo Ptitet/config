@@ -1,20 +1,9 @@
+{ ... }:
 {
-  ...
-}:
-# let
-#   username = "jules";
-#   system = "x86_64-linux";
-# in
-{
-  home.shellAliases = {
-    please = "sudo";
-  };
-  home.enableZshIntegration = true;
-
   programs.zsh = {
     enable = true;
     autocd = true;
-    autosuggestions = {
+    autosuggestion = {
       enable = true;
     };
     enableCompletion = true;
@@ -32,4 +21,18 @@
     enable = true;
     enableZshIntegration = true;
   };
+
+  programs.home-manager.enable = true; # Let Home Manager install and manage itself
+  home =
+    let
+      name = "jules";
+    in
+    {
+      username = name;
+      homeDirectory = "/home/${name}";
+      shellAliases = {
+        please = "sudo";
+      };
+      stateVersion = "25.05"; # Don't touch that
+    };
 }

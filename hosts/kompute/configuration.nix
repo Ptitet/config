@@ -46,6 +46,7 @@ in
   networking.hostName = "kompute";
 
   services = {
+    gnome.gnome-keyring.enable = false; # Niri enables it and I don't want it
     printing.enable = true; # CUPS services for printing
     pipewire = {
       # Enable sound.

@@ -1,11 +1,11 @@
 { pkgs, ... }:
 {
   programs = {
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-      xwayland.enable = true;
-    };
+    # hyprland = {
+    #   enable = true;
+    #   withUWSM = true;
+    #   xwayland.enable = true;
+    # };
     niri.enable = true;
     steam.enable = true;
   };
@@ -27,6 +27,7 @@
     brightnessctl # adjust screen brightness
     pwvucontrol # sound control panel
     bluez-experimental
+    xwayland-satellite
 
     uwsm # for hyprland
     jq

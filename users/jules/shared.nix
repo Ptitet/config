@@ -1,5 +1,7 @@
 { ... }:
 {
+  home.shellAliases = import ./misc/aliases.nix;
+
   programs.zsh = {
     enable = true;
     autocd = true;
@@ -23,16 +25,4 @@
   };
 
   programs.home-manager.enable = true; # Let Home Manager install and manage itself
-  home =
-    let
-      name = "jules";
-    in
-    {
-      username = name;
-      homeDirectory = "/home/${name}";
-      shellAliases = {
-        please = "sudo";
-      };
-      stateVersion = "25.05"; # Don't touch that
-    };
 }

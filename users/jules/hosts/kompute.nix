@@ -4,7 +4,6 @@
 }:
 {
   imports = [
-    ../shared.nix
     ../apps
     ../services
   ];

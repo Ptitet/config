@@ -17,7 +17,21 @@ in
         { name, ... }:
         {
           inherit name;
-          value = ../users/${name}/hosts/${hostname}.nix;
+          value = {
+            imports =
+              let
+                userdir = "../users/${name}";
+              in
+              [
+                ./${userdir}/shared.nix
+                ./${userdir}/hosts/${hostname}.nix
+              ];
+            home = {
+              username = name;
+              homeDirectory = "/home/${name}";
+              stateVersion = "25.05"; # Don't touch that
+            };
+          };
         }
       ) users
     );

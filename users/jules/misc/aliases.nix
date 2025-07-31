@@ -14,7 +14,8 @@
   ff = "fastfetch";
   bt = "bluetoothctl";
   rbs = "sudo nixos-rebuild switch --flake /home/jules/nixos";
-  rbbb = "sudo nixos-rebuild boot --flake /home/jules/nixos && reboot";
+  rbb = "sudo nixos-rebuild boot --flake /home/jules/nixos";
+  rbbr = "rbb && reboot";
   airpods = "bluetoothctl connect 98:A5:F9:0D:EB:CB";
 
   # Zed

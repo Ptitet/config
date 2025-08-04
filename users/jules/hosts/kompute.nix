@@ -21,10 +21,8 @@
   home.packages = with pkgs; [
     obsidian
     baobab
-    bun
     discord
     fastfetch
-    hyprpaper
     localsend
   ];
 }

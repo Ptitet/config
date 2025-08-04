@@ -11,7 +11,8 @@
 
   environment.systemPackages = with pkgs; [
     usbtop
-    zinit
     jq
+    wl-clipboard
+    fd
   ];
 }

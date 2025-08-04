@@ -17,6 +17,7 @@
   rbb = "sudo nixos-rebuild boot --flake /home/jules/nixos";
   rbbr = "rbb && reboot";
   airpods = "bluetoothctl connect 98:A5:F9:0D:EB:CB";
+  use = "nix-shell -p";
 
   # Zed
   zed = "zeditor";

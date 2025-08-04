@@ -14,6 +14,10 @@
     zed.enable = true;
   };
 
+  my.services = {
+    wpaperd.enable = true;
+  };
+
   home.packages = with pkgs; [
     obsidian
     baobab

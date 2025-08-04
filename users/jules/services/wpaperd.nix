@@ -1,9 +1,9 @@
 { lib, config, ... }:
 let
-  cfg = config.my.wpaperd;
+  cfg = config.my.services.wpaperd;
 in
 {
-  options.my.wpaperd.enable = lib.mkEnableOption "Enables wpaperd";
+  options.my.services.wpaperd.enable = lib.mkEnableOption "Enables wpaperd";
 
   config = lib.mkIf cfg.enable {
     services.wpaperd = {

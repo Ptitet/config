@@ -16,7 +16,6 @@
 
   services = {
     printing.enable = true; # CUPS services for printing
-
     libinput.enable = true; # Enable touchpad support (enabled default in most desktopManager).
     gvfs.enable = true; # Needed for Nautilus
     logind.lidSwitchDocked = "suspend";

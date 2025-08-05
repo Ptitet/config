@@ -14,5 +14,6 @@
     jq
     wl-clipboard
     fd
+    socat
   ];
 }

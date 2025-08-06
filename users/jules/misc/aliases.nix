@@ -1,3 +1,6 @@
+let
+  flakeRoot = "/home/jules/nixos";
+in
 {
   # ls
   ls = "ls -h --color=auto";
@@ -13,8 +16,8 @@
   c = "clear";
   ff = "fastfetch";
   bt = "bluetoothctl";
-  rbs = "sudo nixos-rebuild switch --flake /home/jules/nixos";
-  rbb = "sudo nixos-rebuild boot --flake /home/jules/nixos";
+  rbs = "sudo nixos-rebuild switch --flake ${flakeRoot}";
+  rbb = "sudo nixos-rebuild boot --flake ${flakeRoot}";
   rbbr = "rbb && reboot";
   airpods = "bluetoothctl connect 98:A5:F9:0D:EB:CB";
   use = "nix-shell -p";

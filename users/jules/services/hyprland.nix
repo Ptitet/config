@@ -1,8 +1,11 @@
 { config, lib, ... }:
+let
+  cfg = config.my.services.hyprland;
+in
 {
   options.my.services.hyprland.enable = lib.mkEnableOption "Enables Hyprland";
 
-  config = lib.mkIf config.my.services.hyprland.enable {
+  config = lib.mkIf cfg.enable {
     # xdg.configFile."uwsm/env".source =
     #   "${config.home.sessionVariablesPackage}/etc/profile.d/hm-session-vars.sh";
     home.sessionVariables = {

@@ -1,4 +1,7 @@
 { config, lib, ... }:
+let
+  cfg = config.my.apps.firefox;
+in
 {
   options.my.apps.firefox = {
     enable = lib.mkEnableOption "Enables Firefox";
@@ -7,7 +10,7 @@
   # https://discourse.nixos.org/t/combining-best-of-system-firefox-and-home-manager-firefox-settings/37721
   # https://discourse.nixos.org/t/declare-firefox-extensions-and-settings/36265
   # https://mozilla.github.io/policy-templates/
-  config = lib.mkIf config.my.apps.firefox.enable {
+  config = lib.mkIf cfg.enable {
     programs.firefox = {
       enable = true;
       languagePacks = [

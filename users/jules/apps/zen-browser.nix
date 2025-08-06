@@ -4,6 +4,9 @@
   lib,
   ...
 }:
+let
+  cfg = config.my.apps.zen-browser;
+in
 {
   imports = [
     inputs.zen-browser.homeModules.twilight
@@ -11,7 +14,7 @@
 
   options.my.apps.zen-browser.enable = lib.mkEnableOption "Enables Zen browser";
 
-  config = lib.mkIf config.my.apps.zen-browser.enable {
+  config = lib.mkIf cfg.enable {
     programs.zen-browser = {
       enable = true;
       policies = {

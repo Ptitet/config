@@ -4,10 +4,13 @@
   pkgs,
   ...
 }:
+let
+  cfg = config.my.apps.zed;
+in
 {
   options.my.apps.zed.enable = lib.mkEnableOption "Enables zed";
 
-  config = lib.mkIf config.my.apps.zed.enable {
+  config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       zed-editor
       nixd # Nix lsp

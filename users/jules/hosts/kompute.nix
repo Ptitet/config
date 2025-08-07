@@ -16,6 +16,7 @@
 
   my.services = {
     wpaperd.enable = true;
+    waybar.enable = true;
   };
 
   home.packages = with pkgs; [

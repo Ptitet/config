@@ -2,6 +2,7 @@
 {
   hardware.bluetooth = {
     enable = true;
+    powerOnBoot = false;
     settings = {
       General = {
         Enable = "Source,Sink,Media,Socket";
@@ -10,6 +11,6 @@
     };
   };
   environment.systemPackages = with pkgs; [
-    bluez-experimental
+    bluetui
   ];
 }

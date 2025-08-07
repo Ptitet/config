@@ -10,7 +10,7 @@
 
   my.apps = {
     zen-browser.enable = true;
-    firefox.enable = true;
+    firefox.enable = false;
     zed.enable = true;
   };
 

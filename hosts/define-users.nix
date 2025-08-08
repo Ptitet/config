@@ -24,7 +24,7 @@ in
               in
               [
                 ./${userdir}/shared.nix
-                ./${userdir}/hosts/${hostname}.nix
+                ./${userdir}/hosts/${hostname}
               ];
             home = {
               username = name;

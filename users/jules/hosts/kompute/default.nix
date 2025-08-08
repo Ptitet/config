@@ -1,11 +1,12 @@
 {
   pkgs,
+  config,
   ...
 }:
 {
   imports = [
-    ../apps
-    ../services
+    ../../apps
+    ../../services
   ];
 
   my.apps = {
@@ -17,6 +18,11 @@
   my.services = {
     wpaperd.enable = true;
     waybar.enable = true;
+  };
+
+  home.file.${config.xdg.configHome} = {
+    source = ./config;
+    recursive = true;
   };
 
   home.packages = with pkgs; [

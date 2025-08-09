@@ -1,6 +1,5 @@
 {
   pkgs,
-  config,
   ...
 }:
 {
@@ -20,7 +19,7 @@
     waybar.enable = true;
   };
 
-  home.file.${config.xdg.configHome} = {
+  home.file.".config" = {
     source = ./config;
     recursive = true;
   };

@@ -19,6 +19,7 @@
     btop
     fzf
     sops
+    file
   ];
   programs.zsh = {
     enable = true;

@@ -13,7 +13,7 @@
       brightness_up_command = "/run/current-system/sw/bin/brightnessctl -n -e set 10%-";
       clear_password = true;
       numlock = true;
-      xinitrc = null;
+      # xinitrc = null; # not supported by the nixpkgs ly package
     };
   };
 }

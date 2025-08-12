@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -30,5 +31,6 @@
     discord
     fastfetch
     localsend
+    inputs.otter-launcher.packages."x86_64-linux".default
   ];
 }

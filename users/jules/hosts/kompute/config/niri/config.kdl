@@ -60,7 +60,7 @@ binds {
     Mod+Shift+Comma { show-hotkey-overlay; }
 
     // Launcher
-    Mod+Space repeat=false hotkey-overlay-title="Launcher (otter-launcher)" { spawn "kitty" "--class" "otter-launcher"; }
+    Mod+Space repeat=false hotkey-overlay-title="Launcher (otter-launcher)" { spawn "kitty" "--class" "otter-launcher" "otter-launcher"; }
 
     // Frequently used programs
     Mod+T repeat=false hotkey-overlay-title="Terminal (kitty)" { spawn "kitty"; }
@@ -74,11 +74,11 @@ binds {
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+" "--limit" "1"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-" ; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
     XF86AudioMute repeat=false allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
     XF86AudioMicMute repeat=false allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "-e" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "-n" "-e" "set" "10%-"; }
+    XF86MonBrightnessUp repeat=true allow-when-locked=true { spawn "brightnessctl" "-e" "set" "+10%"; }
+    XF86MonBrightnessDown repeat=true allow-when-locked=true { spawn "brightnessctl" "-n" "-e" "set" "10%-"; }
     XF86AudioNext repeat=false allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPause repeat=false allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioPlay repeat=false allow-when-locked=true { spawn "playerctl" "play-pause"; }

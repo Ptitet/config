@@ -12,8 +12,10 @@
       inputs.home-manager.follows = "home-manager";
     };
     otter-launcher = {
-      url = "path:/home/jules/Programmation/Autres/otter-launcher";
+      url = "github:kuokuo123/otter-launcher";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+
     };
   };
 

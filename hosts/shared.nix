@@ -20,6 +20,8 @@
     fzf
     sops
     file
+    ripgrep
+    fd
   ];
   programs.zsh = {
     enable = true;

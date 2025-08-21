@@ -10,6 +10,7 @@
     ./users.nix
     ./graphics
     ./networking
+    ../modules/thermal-management.nix
   ];
 
   networking.hostName = "kompute";

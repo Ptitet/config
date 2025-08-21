@@ -55,9 +55,5 @@
         name = "kompute";
         system = "x86_64-linux";
       }
-      {
-        name = "raspberry";
-        system = "x86_64-linux";
-      }
     ];
 }

@@ -45,7 +45,6 @@
 
   i18n.defaultLocale = "fr_FR.UTF-8";
   console = {
-    # font = "FiraCode Nerd Font"; # not working
     keyMap = "fr-latin1";
   };
 

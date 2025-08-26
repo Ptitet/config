@@ -41,7 +41,7 @@
                 inherit system pkgs;
                 specialArgs = { inherit inputs; };
                 modules = [
-                  ./hosts/shared.nix
+                  ./hosts/base.nix
                   ./hosts/${name}/configuration.nix
                 ];
               };

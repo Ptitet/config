@@ -19,7 +19,7 @@
     printing.enable = true; # CUPS services for printing
     libinput.enable = true; # Enable touchpad support (enabled default in most desktopManager).
     gvfs.enable = true; # Needed for Nautilus
-    logind.lidSwitchDocked = "suspend";
+    logind.settings.Login.HandleLidSwitchDocked = "suspend";
   };
 
   system.stateVersion = "25.05"; # Don't touch that

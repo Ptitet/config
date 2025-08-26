@@ -1,6 +1,7 @@
 {
   services.displayManager.ly = {
     enable = true;
+    x11support = false; # this is enabled by default but I am on Wayland
     settings = {
       # https://codeberg.org/fairyglade/ly/src/branch/master/res/config.ini
       allow_empty_password = false;

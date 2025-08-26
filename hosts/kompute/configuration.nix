@@ -8,9 +8,9 @@
     inputs.home-manager.nixosModules.home-manager
     ./packages.nix
     ./users.nix
-    ./graphics
     ./networking
-    ../modules/thermal-management.nix
+    ../shared/graphical
+    ../shared/thermal-management.nix
   ];
 
   networking.hostName = "kompute";

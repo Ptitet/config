@@ -8,14 +8,21 @@ in
   config = lib.mkIf cfg.enable {
     services.wpaperd = {
       enable = true;
-      settings = {
-        eDP-1 = {
+      settings =
+        let
           path = "/home/jules/wallpapers";
-          duration = "1min";
-          mode = "center";
-          group = 0;
+        in
+        {
+          eDP-1 = {
+            inherit path;
+            duration = "1min";
+            mode = "center";
+            group = 0;
+          };
+          HDMI-A-1 = {
+            group = 0;
+          };
         };
-      };
     };
   };
 }

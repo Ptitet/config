@@ -1,6 +1,8 @@
 { ... }:
 {
-  home.shellAliases = import ./misc/aliases.nix;
+  imports = [
+    ./misc/zsh-aliases.nix
+  ];
 
   programs.zsh = {
     enable = true;

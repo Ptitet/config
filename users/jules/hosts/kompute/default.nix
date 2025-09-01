@@ -13,6 +13,8 @@
     zen-browser.enable = true;
     firefox.enable = false;
     zed.enable = true;
+    kitty.enable = true;
+    localsend.enable = true;
   };
 
   my.services = {
@@ -30,7 +32,6 @@
     baobab
     discord
     fastfetch
-    localsend
     inputs.otter-launcher.packages."x86_64-linux".default
   ];
 }

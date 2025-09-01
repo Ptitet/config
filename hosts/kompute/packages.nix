@@ -5,5 +5,9 @@
 
   programs = {
     steam.enable = true;
+    localsend = {
+      enable = true;
+      openFirewall = true;
+    };
   };
 }

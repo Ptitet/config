@@ -14,7 +14,6 @@
     firefox.enable = false;
     zed.enable = true;
     kitty.enable = true;
-    localsend.enable = true;
   };
 
   my.services = {

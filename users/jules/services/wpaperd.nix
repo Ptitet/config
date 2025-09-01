@@ -11,17 +11,15 @@ in
       settings =
         let
           path = "/home/jules/wallpapers";
-        in
-        {
-          eDP-1 = {
-            inherit path;
+          random-cfg = group: {
+            inherit path group;
             duration = "1min";
             mode = "center";
-            group = 0;
           };
-          HDMI-A-1 = {
-            group = 0;
-          };
+        in
+        {
+          eDP-1 = random-cfg 0;
+          HDMI-A-1 = random-cfg 0;
         };
     };
   };

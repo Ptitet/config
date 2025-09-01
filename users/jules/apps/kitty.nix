@@ -13,13 +13,16 @@ in
   config.programs.kitty = lib.mkIf cfg.enable {
     enable = true;
     shellIntegration = {
-      mode = null; # https://mynixos.com/home-manager/option/programs.kitty.shellIntegration.mode
+      mode = "no-sudo"; # https://mynixos.com/home-manager/option/programs.kitty.shellIntegration.mode
       enableZshIntegration = true;
     };
     enableGitIntegration = true;
-    font = pkgs.nerd-fonts.fira-code;
+    font = {
+      name = "FiraCode Nerd Font";
+      size = 10;
+      package = pkgs.nerd-fonts.fira-code;
+    };
     settings = {
-      font_size = 10;
       font_features = "FiraCodeNF-Reg +ss04 +ss03 +cv16 +cv31 +cv29 +cv30 +ss02 +ss06";
       cursor_shape_unfocused = "unchanged";
       cursor_beam_thickness = 1;

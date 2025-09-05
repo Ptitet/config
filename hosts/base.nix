@@ -36,10 +36,10 @@
   programs.fzf.fuzzyCompletion = true;
   programs.bat.enable = true;
   programs.git.enable = true;
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  # programs.neovim = {
+  #   enable = true;
+  #   defaultEditor = true;
+  # };
 
   time.timeZone = "Europe/Paris";
 

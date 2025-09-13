@@ -9,33 +9,47 @@ in
     ll = "ls -l";
     lal = "ls -lA";
 
-    # grep
-    grep = "grep --color=auto";
+    # replacements
+    grep = "rg";
+    cat = "bat";
+    less = "bat";
 
     # shortcuts
     q = "exit";
     c = "clear";
     ff = "fastfetch";
     bt = "bluetoothctl";
+    airpods = "bluetoothctl connect 98:A5:F9:0D:EB:CB";
+    use = "nix-shell -p";
+    zed = "zeditor";
+    zeda = "zeditor -a";
+
+    # nixos-rebuild
     rbs = "sudo nixos-rebuild switch --flake ${flakeRoot}";
     rbb = "sudo nixos-rebuild boot --flake ${flakeRoot}";
     rbt = "sudo nixos-rebuild test --flake ${flakeRoot}";
     rbbr = "rbb && reboot";
-    airpods = "bluetoothctl connect 98:A5:F9:0D:EB:CB";
-    use = "nix-shell -p";
 
-    # Zed
-    zed = "zeditor";
-    zeda = "zeditor -a";
+    # nix develop
+    # we set this variable so the flake can switch to zsh instead of bash
+    ndev = "INTERACTIVE_DEV_SHELL=1 nix develop";
 
     # Fun because fun
     please = "sudo";
   };
-  programs.zsh.initContent = ''
-    nix-optimiser() {
+  programs.zsh.siteFunctions = {
+    nix-optimise = ''
       sudo nix-env --delete-generations +3 -p /nix/var/nix/profiles/system
       sudo nix-collect-garbage
       sudo nix-store --optimise
-    }
-  '';
+    '';
+
+    # use = ''
+    #   local packages=""
+    #   for pkgs in "$@"; do
+    #     packages="$packages nixpkgs#$pkgs"
+    #   done
+    #   nix shell $\{packages[@]}
+    # '';
+  };
 }

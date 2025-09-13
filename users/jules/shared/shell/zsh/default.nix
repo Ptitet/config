@@ -19,9 +19,8 @@
       ignoreSpace = true;
     };
     defaultKeymap = "emacs";
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    historySubstringSearch.enable = true;
   };
-  enableCompetion = true;
-  autosuggestion.enable = true;
-  syntaxHighlighting.enable = true;
-  historySubstringSearch.enable = true;
 }

@@ -5,8 +5,8 @@
 }:
 {
   imports = [
-    ../../apps
-    ../../services
+    ../../shared/apps
+    ../../shared/services
   ];
 
   my.apps = {
@@ -19,11 +19,6 @@
   my.services = {
     wpaperd.enable = true;
     waybar.enable = true;
-  };
-
-  home.file.".config" = {
-    source = ./config;
-    recursive = true;
   };
 
   home.packages = with pkgs; [

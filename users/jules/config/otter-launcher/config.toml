@@ -1,0 +1,39 @@
+[general]
+default_module = "ddg"
+empty_module = "app"
+exec_cmd = "zsh -c"
+esc_to_abort = true
+cheatsheet_entry = "?"
+cheatsheet_viewer = "less -R; clear"
+
+[interface]
+place_holder = "type and search"
+suggestion_mode = "hint"
+
+[[modules]]
+description = "search with duckduckgo"
+prefix = "ddg"
+cmd = "xdg-open 'https://duckduckgo.com/?q={}'"
+with_arguments = true
+url_encode = true
+
+[[modules]]
+description = "launch an app"
+prefix = "app"
+cmd = """
+get_files() {
+    IFS=: read -rA data_dirs <<< "$XDG_DATA_DIRS"
+    desktop_files=()
+    for data_dir in "${data_dirs[@]}"; do
+        [ ! -d "$data_dir/applications" ] && continue
+        desktop_files+=("$data_dir"/applications/*.desktop)
+    done
+    entries=()
+    for desktop_file in "${desktop_files[@]}"; do
+        name=$(rg "^Name\\[fr\\]" "$desktop_file" | cut -d= -f2)
+        [ -z "$name" ] && name=$(rg "^Name" "$desktop_file" | head -n 1 | cut -d= -f2)
+        printf "%s|%s\n" "$name" "$desktop_file"
+    done
+}
+desktop_files | fzf --delimiter='|' --with-nth=1
+"""

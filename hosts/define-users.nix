@@ -23,7 +23,7 @@ in
                 userdir = "../users/${name}";
               in
               [
-                ./${userdir}/shared.nix
+                ./${userdir}/shared
                 ./${userdir}/hosts/${hostname}
               ];
             home = {

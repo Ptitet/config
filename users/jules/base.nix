@@ -7,7 +7,7 @@
 
   xdg.configFile =
     let
-      configs = builtins.attrNames (builtins.readDir "./config");
+      configs = builtins.attrNames (builtins.readDir ./config);
       configPath = "${config.home.homeDirectory}/nixos/users/jules/config";
       mapFn = name: {
         inherit name;

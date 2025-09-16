@@ -5,9 +5,16 @@
     ./shared/cli/git.nix
   ];
 
-  home.file.".config" = {
-    source = config.lib.file.mkOutOfStoreSymlink ./config;
-  };
+  xdg.configFile =
+    let
+      configs = builtins.attrNames (builtins.readDir "./config");
+      configPath = "${config.home.homeDirectory}/nixos/users/jules/config";
+      mapFn = name: {
+        inherit name;
+        value.source = config.lib.file.mkOutOfStoreSymlink "${configPath}/${name}";
+      };
+    in
+    builtins.listToAttrs (map mapFn configs);
 
   programs.fzf = {
     enable = true;

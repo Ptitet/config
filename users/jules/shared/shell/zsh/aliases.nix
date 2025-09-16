@@ -32,14 +32,16 @@ in
 
     # nix develop
     # we set this variable so the flake can switch to zsh instead of bash
-    ndev = "INTERACTIVE_DEV_SHELL=1 nix develop";
+    ndev = "INTERACTIVE_DEV_SHELL=1 nix develop --profile nix/profile";
 
     # Fun because fun
     please = "sudo";
   };
   programs.zsh.siteFunctions = {
     nix-optimise = ''
-      sudo nix-env --delete-generations +3 -p /nix/var/nix/profiles/system
+      local arg=$1
+      local n="$\{arg:-3}"
+      sudo nix-env --delete-generations +$n -p /nix/var/nix/profiles/system
       sudo nix-collect-garbage
       sudo nix-store --optimise
     '';

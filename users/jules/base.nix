@@ -1,8 +1,8 @@
 { config, ... }:
 {
   imports = [
-    ./shell
-    ./cli/git.nix
+    ./shared/shell
+    ./shared/cli/git.nix
   ];
 
   home.file.".config" = {

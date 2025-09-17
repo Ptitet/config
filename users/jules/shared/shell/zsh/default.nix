@@ -23,4 +23,6 @@
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
   };
+
+  programs.direnv.enableZshIntegration = true;
 }

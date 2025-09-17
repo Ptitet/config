@@ -29,20 +29,17 @@
         nixosConfigurations = builtins.listToAttrs (
           map (
             { name, system }:
-            let
-              pkgs = import nixpkgs {
-                inherit system;
-                config.allowUnfree = true;
-              };
-            in
             {
               inherit name;
               value = nixpkgs.lib.nixosSystem {
-                inherit system pkgs;
+                inherit system;
                 specialArgs = { inherit inputs; };
                 modules = [
                   ./hosts/base.nix
                   ./hosts/${name}/configuration.nix
+                  {
+                    nixpkgs.config.allowUnfree = true;
+                  }
                 ];
               };
             }

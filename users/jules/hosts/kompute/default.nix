@@ -14,6 +14,7 @@
     firefox.enable = false;
     zed.enable = true;
     kitty.enable = true;
+    # mega.enable = true;
   };
 
   my.services = {
@@ -27,5 +28,6 @@
     discord
     fastfetch
     inputs.otter-launcher.packages."x86_64-linux".default
+    # crudini # for the app module of otter-launcher
   ];
 }

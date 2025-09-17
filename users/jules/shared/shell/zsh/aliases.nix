@@ -39,9 +39,7 @@ in
   };
   programs.zsh.siteFunctions = {
     nix-optimise = ''
-      local arg=$1
-      local n="$\{arg:-3}"
-      sudo nix-env --delete-generations +$n -p /nix/var/nix/profiles/system
+      sudo nix-env --delete-generations +3 -p /nix/var/nix/profiles/system
       sudo nix-collect-garbage
       sudo nix-store --optimise
     '';

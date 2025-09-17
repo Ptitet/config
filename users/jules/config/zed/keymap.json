@@ -1,0 +1,59 @@
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+
+[
+    {
+        "bindings": {
+            "ctrl-ù": "terminal_panel::ToggleFocus",
+            "ctrl-+": "zed::IncreaseBufferFontSize",
+            "ctrl-=": "zed::DecreaseBufferFontSize",
+            "ctrl-?": "zed::OpenKeymap",
+            "ctrl-r": ["projects::OpenRecent", { "create_new_window": false }],
+            "ctrl-%": "workspace::ToggleZoom",
+            "ctrl-b": "project_panel::ToggleFocus",
+            "ctrl-alt-b": "workspace::ToggleLeftDock",
+            "ctrl-p": "file_finder::Toggle"
+        }
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "ctrl-d": "project_panel::NewDirectory",
+            "enter": "project_panel::Open",
+            "ctrl-b": "workspace::ToggleRightDock"
+        }
+    },
+    {
+        "context": "Terminal",
+        "bindings": {
+            "ctrl-ù": "workspace::ToggleBottomDock",
+            "ctrl-t": "workspace::NewTerminal",
+            "ctrl-w": "pane::CloseActiveItem"
+        }
+    },
+    {
+        "context": "Editor",
+        "bindings": {
+            // Formatting does not respect tab_size
+            // https://github.com/zed-industries/zed/issues/4842
+            // https://github.com/zed-industries/zed/issues/12154
+            "alt-shift-f": "editor::Format",
+            "ctrl-:": "editor::ToggleComments",
+            "ctrl-enter": "editor::NewlineBelow",
+            "ctrl-shift-enter": "editor::NewlineAbove",
+            "ctrl-shift-d": "editor::DeleteLine",
+            "shift-alt-up": "editor::DuplicateLineUp",
+            "shift-alt-down": "editor::DuplicateLineDown"
+        }
+    },
+    {
+        "context": "FileFinder",
+        "bindings": {
+            "ctrl-shift-p": "command_palette::Toggle"
+        }
+    }
+]

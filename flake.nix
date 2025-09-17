@@ -18,7 +18,7 @@
     };
     auto-cpufreq = {
       url = "github:AdnanHodzic/auto-cpufreq";
-      inputs.nixpkgs.url = "github:NixOS/nixpkgs/648f70160c03151bc2121d179291337ad6bc564b"; # urwid 2.6.16 required by auto-cpufreq
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

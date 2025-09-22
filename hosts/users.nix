@@ -5,7 +5,7 @@
   ...
 }:
 let
-  define-users = import ../define-users.nix { inherit inputs pkgs config; };
+  define-users = import ./define-users.nix { inherit inputs pkgs config; };
 in
 define-users [
   {

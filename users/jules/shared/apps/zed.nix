@@ -23,6 +23,7 @@ in
             vscode-json-languageserver # json lsp
             yaml-language-server # yaml lsp
             tombi
+            tinymist
           ];
           formatters = [ nixfmt-rfc-style ];
         in

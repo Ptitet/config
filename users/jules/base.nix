@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 {
   imports = [
     ./shared/shell
@@ -20,6 +20,10 @@
     enable = true;
     enableZshIntegration = true;
   };
+
+  home.packages = with pkgs; [
+    typst
+  ];
 
   programs.home-manager.enable = true; # Let Home Manager install and manage itself
 }

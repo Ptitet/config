@@ -52,5 +52,9 @@
         name = "kompute";
         system = "x86_64-linux";
       }
+      {
+        name = "liberty";
+        system = "x86_64-linux";
+      }
     ];
 }

@@ -7,7 +7,6 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     ../users.nix
-    ./vpn.nix
     ../shared/networking
     ../shared/packages
     ../shared/graphical

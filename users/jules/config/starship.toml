@@ -1,15 +1,23 @@
 #:schema https://starship.rs/config-schema.json
 
 format = '''
-╭[$username@$host](red) [$directory](light blue) $bun$c
-╰$env_var $character
+[╭](grey)$directory $bun$c $fill $cmd_duration$env_var
+[╰](grey)$character
 '''
-right_format = "$cmd_duration"
+
+[directory]
+truncation_length = 8
+truncate_to_repo = true
+truncation_symbol = " "
+format = " $path"
 
 [character]
-success_symbol = "[➜](bold green) "
-error_symbol = "[✗](bold red) "
+success_symbol = "[❯](green) "
+error_symbol = "[❯](bold red) "
 
 [env_var]
-variable = "INTERACTIVE_DEV_SHELL"
-format = "[DEV]"
+variable = "IN_NIX_SHELL"
+format = '[\[DEV\]](purple)'
+
+[fill]
+symbol = " "

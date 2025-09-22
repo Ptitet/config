@@ -1,6 +1,6 @@
 {
   imports = [
-    ../shared/cli-utils.nix
+    ./cli-utils.nix
   ];
 
   programs = {

@@ -2,7 +2,6 @@
 {
   imports = [
     ./bluetooth.nix
-    ./vpn.nix
   ];
 
   networking = {

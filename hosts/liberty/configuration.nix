@@ -14,7 +14,7 @@
     ../shared/thermal-management.nix
   ];
 
-  networking.hostName = "kompute";
+  networking.hostName = "liberty";
 
   services = {
     printing.enable = true; # CUPS services for printing

@@ -23,6 +23,7 @@ in
     use = "nix-shell -p";
     zed = "zeditor";
     zeda = "zeditor -a";
+    tp = "btop";
 
     # nixos-rebuild
     rbs = "sudo nixos-rebuild switch --flake ${flakeRoot}";

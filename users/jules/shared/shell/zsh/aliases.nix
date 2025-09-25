@@ -31,10 +31,6 @@ in
     rbt = "sudo nixos-rebuild test --flake ${flakeRoot}";
     rbbr = "rbb && reboot";
 
-    # nix develop
-    # we set this variable so the flake can switch to zsh instead of bash
-    ndev = "INTERACTIVE_DEV_SHELL=1 nix develop --profile nix/profile";
-
     # Fun because fun
     please = "sudo";
   };

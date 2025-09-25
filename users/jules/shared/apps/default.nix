@@ -5,5 +5,6 @@
     ./zed.nix
     ./kitty.nix
     ./mega.nix
+    ./anki.nix
   ];
 }

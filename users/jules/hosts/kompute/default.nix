@@ -14,6 +14,7 @@
     firefox.enable = false;
     zed.enable = true;
     kitty.enable = true;
+    anki.enable = true;
     # mega.enable = true;
   };
 

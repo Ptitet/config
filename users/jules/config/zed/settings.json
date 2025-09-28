@@ -1,146 +1,163 @@
 {
-    "icon_theme": "Zed (Default)",
-    "project_panel": {
-        "dock": "right"
-    },
-    "features": {
-        "edit_prediction_provider": "none"
-    },
-    "collaboration_panel": {
-        "button": false
-    },
-    "chat_panel": {
-        "button": "never",
-        "dock": "bottom"
-    },
-    "agent": {
-        "default_profile": "ask",
-        "default_model": {
-            "provider": "copilot_chat",
-            "model": "gpt-4.1"
-        },
-        "button": true,
-        "enabled": true
-    },
-    "telemetry": {
-        "diagnostics": false,
-        "metrics": false
-    },
-    "ui_font_size": 15,
-    "buffer_font_family": "FiraCode Nerd Font",
-    "buffer_font_size": 12,
-    "buffer_font_features": {
-        "ss04": true,
-        "ss03": true,
-        "cv15": true,
-        "cv16": true,
-        "cv31": true,
-        "cv29": true,
-        "cv30": true,
-        "ss02": true,
-        "ss06": true
-    },
-    "theme": {
-        "mode": "dark",
-        "light": "Gruvbox Light Soft",
-        "dark": "Gruvbox Dark Soft"
-    },
-    "autosave": "on_focus_change",
-    "restore_on_startup": "last_workspace",
-    "autoscroll_on_clicks": true,
-    "auto_update": false,
-    "edit_predictions_disabled_in": ["comment", "string"],
-    "tabs": {
-        "file_icons": true,
-        "git_status": true,
-        "show_diagnostics": "all"
-    },
-    "tab_bar": {
-        "show_nav_history_buttons": false,
-        "show_tab_bar_buttons": false
-    },
-    "indent_guides": {
-        "active_line_width": 2
-    },
-    "inlay_hints": {
-        "enabled": true,
-        "show_type_hints": false
-    },
-    "file_scan_exclusions": [
-        "**/.git",
-        "**/.svn",
-        "**/.hg",
-        "**/CVS",
-        "**/.DS_Store",
-        "**/Thumbs.db",
-        "**/.classpath",
-        "**/.settings",
-        "**/node_modules",
-        "**/@girs",
-        ".direnv",
-        ".envrc"
-    ],
-    "tab_size": 4,
-    "extend_comment_on_newline": true,
-    "soft_wrap": "bounded",
-    "preferred_line_length": 100,
-    "lsp": {
-        "vtsls": {
-            "settings": {
-                "typescript": {
-                    "inlayHints": {
-                        "parameterNames": {
-                            "enabled": "all",
-                            "suppressWhenArgumentMatchesName": true
-                        }
-                    }
-                },
-                "javascript": {
-                    "inlayHints": {
-                        "parameterNames": {
-                            "enabled": "all",
-                            "suppressWhenArgumentMatchesName": true
-                        }
-                    }
-                }
-            }
-        },
-        "nil": {
-            "settings": {
-                "nix": {
-                    "flake": {
-                        "autoArchive": true
-                    }
-                }
-            }
-        }
-    },
-    "languages": {
-        "TypeScript": {
-            "language_servers": ["tsgo", "vtsls"],
-            "always_treat_brackets_as_autoclosed": true
-        },
-        "Nix": {
-            "inlay_hints": {
-                "enabled": true
-            },
-            "tab_size": 2
-        }
-    },
-    "file_types": {
-        "Hyprland Config": [
-            "bindings.conf",
-            "hypridle.conf",
-            "hyprland.conf",
-            "hyprlock.conf",
-            "hyprpaper.conf"
-        ],
-        "JSONC": ["bun.lock"]
-    },
-    "auto_install_extensions": {
-        "basher": true,
-        "kdl": true,
-        "nix": true,
-        "toml": true
-    }
+	// ---------------------
+	// --- Editor layout ---
+	// ---------------------
+	"project_panel": {
+		"dock": "right"
+	},
+	"collaboration_panel": {
+		"button": false
+	},
+	"tabs": {
+		"file_icons": true,
+		"git_status": true,
+		"show_diagnostics": "all"
+	},
+	"tab_bar": {
+		"show_nav_history_buttons": false,
+		"show_tab_bar_buttons": false
+	},
+	"indent_guides": {
+		"active_line_width": 2
+	},
+	// ---------------
+	// --- AI crap ---
+	// ---------------
+	"features": {
+		"edit_prediction_provider": "none"
+	},
+	"agent": {
+		"default_profile": "ask",
+		"default_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-4.1"
+		},
+		"button": false,
+		"enabled": false
+	},
+	"telemetry": {
+		"diagnostics": false,
+		"metrics": false
+	},
+	// ---------------
+	// --- Theming ---
+	// ---------------
+	"icon_theme": "Zed (Default)",
+	"theme": {
+		"mode": "dark",
+		"light": "Gruvbox Light Soft",
+		"dark": "Gruvbox Dark Soft"
+	},
+	"ui_font_size": 15,
+	"buffer_font_family": "FiraCode Nerd Font",
+	"buffer_font_size": 12,
+	"buffer_font_features": {
+		"ss04": true,
+		"ss03": true,
+		"cv15": true,
+		"cv16": true,
+		"cv31": true,
+		"cv29": true,
+		"cv30": true,
+		"ss02": true,
+		"ss06": true
+	},
+	// -------------------------
+	// --- Coding experience ---
+	// -------------------------
+	"autosave": "on_focus_change",
+	"autoscroll_on_clicks": true,
+	"inlay_hints": {
+		"enabled": true,
+		"show_type_hints": false
+	},
+	"file_scan_exclusions": [
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/CVS",
+		"**/.DS_Store",
+		"**/Thumbs.db",
+		"**/.classpath",
+		"**/.settings",
+		"**/node_modules",
+		"**/@girs",
+		".direnv",
+		".envrc"
+	],
+	"restore_on_startup": "last_workspace",
+	"extend_comment_on_newline": true,
+	"soft_wrap": "bounded",
+	"preferred_line_length": 100,
+	// -------------------------
+	// --- Language settings ---
+	// -------------------------
+	"tab_size": 2,
+	"hard_tabs": false, // Language override not working on this
+	"formatter": "language_server",
+	"format_on_save": "language_server",
+	"lsp": {
+		"vtsls": {
+			"settings": {
+				"typescript": {
+					"inlayHints": {
+						"parameterNames": {
+							"enabled": "all",
+							"suppressWhenArgumentMatchesName": true
+						}
+					}
+				},
+				"javascript": {
+					"inlayHints": {
+						"parameterNames": {
+							"enabled": "all",
+							"suppressWhenArgumentMatchesName": true
+						}
+					}
+				}
+			}
+		},
+		"nil": {
+			"settings": {
+				"nix": {
+					"flake": {
+						"autoArchive": true
+					}
+				}
+			}
+		}
+	},
+	"languages": {
+		"TypeScript": {
+			"language_servers": [
+				"tsgo",
+				"vtsls"
+			],
+			"always_treat_brackets_as_autoclosed": true
+		},
+		"Nix": {
+			"inlay_hints": {
+				"enabled": true
+			},
+			"hard_tabs": false
+		}
+	},
+	"file_types": {
+		"JSONC": [
+			"bun.lock"
+		],
+		"Nix": [
+			"nix"
+		]
+	},
+	// ------------
+	// --- Misc ---
+	// ------------
+	"auto_update": false,
+	"auto_install_extensions": {
+		"basher": true,
+		"kdl": true,
+		"nix": true,
+		"toml": true
+	}
 }

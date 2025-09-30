@@ -8,9 +8,9 @@
       animation = "colormix";
       asterisk = "0x2022";
       auth_fails = 1;
-      brightness_down_cmd = "/run/current-system/sw/bin/brightnessctl -n -e set 10%-";
+      brightness_down_cmd = "/run/current-system/sw/bin/brightnessctl -n -e set 5%-";
       brightness_down_key = "F11";
-      brightness_up_cmd = "/run/current-system/sw/bin/brightnessctl -e set +10%";
+      brightness_up_cmd = "/run/current-system/sw/bin/brightnessctl -e set +5%";
       brightness_up_key = "F12";
       clear_password = true;
       # xinitrc = null; # not supported by the nixpkgs ly package

@@ -67,12 +67,10 @@ binds {
     Mod+E repeat=false hotkey-overlay-title="File manager (Nautilus)" { spawn "nautilus"; }
     Mod+Z repeat=false hotkey-overlay-title="Text editor (Zed)" { spawn "zeditor"; }
     Mod+F repeat=false hotkey-overlay-title="Web browser (Zen)" { spawn "zen"; }
-    // Mod+Shift+F repeat=false hotkey-overlay-title="Secondary web browser (Firefox)" { spawn "firefox"; }
     Mod+D repeat=false hotkey-overlay-title="Discord" { spawn "discord"; }
     Mod+O repeat=false hotkey-overlay-title="Obsidian" { spawn "obsidian"; }
 
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
+    // Hardware control (sound and brightness)
     XF86AudioRaiseVolume cooldown-ms=50 allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+" "--limit" "1"; }
     XF86AudioLowerVolume cooldown-ms=50 allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%-"; }
     XF86AudioMute repeat=false allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
@@ -81,14 +79,15 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "-n" "-e" "set" "5%-"; }
     Shift+XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "-d" "asus::kbd_backlight" "-e" "set" "+1"; }
     Shift+XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "-d" "asus::kbd_backlight" "-e" "set" "1-"; }
+
+    // Media
     XF86AudioNext repeat=false allow-when-locked=true { spawn "playerctl" "next"; }
     XF86AudioPause repeat=false allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioPlay repeat=false allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioPrev repeat=false allow-when-locked=true { spawn "playerctl" "previous"; }
 
-    // Open/close the Overview: a zoomed-out view of workspaces and windows.
-    // You can also move the mouse into the top-left hot corner,
-    // or do a four-finger swipe up on a touchpad.
+    Mod+Alt+R repeat=false allow-when-locked=true { spawn "nmcli device wifi rescan"; }
+
     Mod+TwoSuperior repeat=false { toggle-overview; }
 
     Mod+C { close-window; }

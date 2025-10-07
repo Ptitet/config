@@ -86,8 +86,6 @@ binds {
     XF86AudioPlay repeat=false allow-when-locked=true { spawn "playerctl" "play-pause"; }
     XF86AudioPrev repeat=false allow-when-locked=true { spawn "playerctl" "previous"; }
 
-    Mod+Alt+R repeat=false allow-when-locked=true { spawn "nmcli device wifi rescan"; }
-
     Mod+TwoSuperior repeat=false { toggle-overview; }
 
     Mod+C { close-window; }

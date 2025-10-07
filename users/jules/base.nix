@@ -16,9 +16,14 @@
     in
     builtins.listToAttrs (map mapFn configs);
 
-  programs.fzf = {
-    enable = true;
-    enableZshIntegration = true;
+  programs = {
+    fzf = {
+      enable = true;
+      enableZshIntegration = true;
+    };
+    chromium = {
+      enable = true;
+    };
   };
 
   home.packages = with pkgs; [

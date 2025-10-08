@@ -69,6 +69,7 @@ binds {
     Mod+F repeat=false hotkey-overlay-title="Web browser (Zen)" { spawn "zen"; }
     Mod+D repeat=false hotkey-overlay-title="Discord" { spawn "discord"; }
     Mod+O repeat=false hotkey-overlay-title="Obsidian" { spawn "obsidian"; }
+    Mod+A repeat=false hotkey-overlay-title="Anki" { spawn "anki"; }
 
     // Hardware control (sound and brightness)
     XF86AudioRaiseVolume cooldown-ms=50 allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "5%+" "--limit" "1"; }

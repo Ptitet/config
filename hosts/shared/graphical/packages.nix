@@ -8,6 +8,7 @@
     kitty
     nautilus
     wl-clipboard
+    eog
   ];
 
   services.gvfs.enable = true;

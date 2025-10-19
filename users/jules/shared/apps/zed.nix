@@ -11,6 +11,7 @@ in
   options.my.apps.zed.enable = lib.mkEnableOption "Enables zed";
 
   config = lib.mkIf cfg.enable {
+    home.packages = with pkgs; [ kdlfmt ]; # not available in path when put in extraPackages
     programs.zed-editor = {
       enable = true;
       extraPackages =

@@ -379,11 +379,9 @@ window-rule {
 }
 
 environment {
-    DISPLAY ":0"
     ELECTRON_OZONE_PLATFORM_HINT "auto"
 }
 
-spawn-at-startup "xwayland-satellite"
 spawn-at-startup "wpaperd"
 spawn-at-startup "waybar"
 

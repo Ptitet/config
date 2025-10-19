@@ -25,6 +25,7 @@
     tree
   ];
   environment.pathsToLink = [ "/share/zsh" ]; # https://mynixos.com/home-manager/option/programs.zsh.enableCompletion
+
   programs.zsh = {
     enable = true;
     autosuggestions = {

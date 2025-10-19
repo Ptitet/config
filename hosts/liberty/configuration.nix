@@ -7,9 +7,10 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
     ../users.nix
+
     ../shared/networking
     ../shared/packages
-    ../shared/graphical
+    ../shared/laptop.nix
   ];
 
   networking.hostName = "liberty";

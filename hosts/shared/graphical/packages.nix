@@ -9,4 +9,6 @@
     nautilus
     wl-clipboard
   ];
+
+  services.gvfs.enable = true;
 }

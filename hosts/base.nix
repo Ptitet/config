@@ -49,12 +49,6 @@
     keyMap = "fr-latin1";
   };
 
-  services.getty.greetingLine = ''
-    \e{green}\l on \n (\s \r)\e{reset}
-    It is \t
-    Enjoy the pain
-  '';
-
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
   ];

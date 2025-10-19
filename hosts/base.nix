@@ -22,6 +22,7 @@
     file
     ripgrep
     fd
+    tree
   ];
   environment.pathsToLink = [ "/share/zsh" ]; # https://mynixos.com/home-manager/option/programs.zsh.enableCompletion
   programs.zsh = {

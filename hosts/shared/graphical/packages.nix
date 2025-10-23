@@ -9,6 +9,8 @@
     nautilus
     wl-clipboard
     eog
+    gimp
+    libreoffice
   ];
 
   services.gvfs.enable = true;

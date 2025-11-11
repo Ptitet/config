@@ -88,8 +88,8 @@
   ],
   "restore_on_startup": "last_workspace",
   "extend_comment_on_newline": true,
-  "soft_wrap": "bounded",
-  "preferred_line_length": 100,
+  "soft_wrap": "editor_width",
+  // "preferred_line_length": 100,
   // -------------------------
   // --- Language settings ---
   // -------------------------
@@ -130,7 +130,10 @@
   },
   "languages": {
     "TypeScript": {
-      "language_servers": ["tsgo", "vtsls"],
+      "language_servers": [
+        "tsgo",
+        "vtsls"
+      ],
       "always_treat_brackets_as_autoclosed": true
     },
     "Nix": {
@@ -154,8 +157,12 @@
     }
   },
   "file_types": {
-    "JSONC": ["bun.lock"],
-    "Nix": ["nix"]
+    "JSONC": [
+      "bun.lock"
+    ],
+    "Nix": [
+      "nix"
+    ]
   },
   // ------------
   // --- Misc ---

@@ -1,8 +1,8 @@
 #:schema https://starship.rs/config-schema.json
 
 format = '''
-[╭](grey)$directory $bun$c $fill $cmd_duration$env_var
-[╰](grey)$character
+[╭](grey)$directory $bun$c $fill $cmd_duration${env_var.IN_NIX_SHELL}
+[╰](grey)${env_var.IN_USE_SHELL}$character
 '''
 
 [directory]
@@ -15,9 +15,11 @@ format = " $path"
 success_symbol = "[❯](green) "
 error_symbol = "[❯](bold red) "
 
-[env_var]
-variable = "IN_NIX_SHELL"
+[env_var.IN_NIX_SHELL]
 format = '[\[DEV\]](purple)'
+
+[env_var.IN_USE_SHELL]
+format = '[\[USE\]](blue)'
 
 [fill]
 symbol = " "

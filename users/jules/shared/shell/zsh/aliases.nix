@@ -20,9 +20,8 @@ in
     ff = "fastfetch";
     bt = "bluetoothctl";
     airpods = "bluetoothctl connect 98:A5:F9:0D:EB:CB";
-    use = "nix-shell -p";
+    # use = "nix-shell -p";
     zed = "zeditor";
-    zeda = "zeditor -a";
     tp = "btop";
 
     # nixos-rebuild
@@ -41,12 +40,12 @@ in
       sudo nix-store --optimise
     '';
 
-    # use = ''
-    #   local packages=""
-    #   for pkgs in "$@"; do
-    #     packages="$packages nixpkgs#$pkgs"
-    #   done
-    #   nix shell $\{packages[@]}
-    # '';
+    use = ''
+      local packages=()
+      for pkg in "$@"; do
+              packages+=("nixpkgs#$pkg")
+      done
+      nix shell -s IN_USE_SHELL 1 ${"$" + "{packages[@]}"}
+    '';
   };
 }

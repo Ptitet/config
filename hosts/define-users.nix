@@ -25,6 +25,7 @@ in
               [
                 ./${userdir}/base.nix
                 ./${userdir}/hosts/${hostname}
+                inputs.agenix.homeManagerModules.default
               ];
             home = {
               username = name;

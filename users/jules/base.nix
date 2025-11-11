@@ -1,13 +1,10 @@
 {
-  pkgs,
-  inputs,
   ...
 }:
 {
   imports = [
     ./shared/shell
     ./shared/cli/git.nix
-    inputs.agenix.homeManagerModules.default
   ];
 
   age = {

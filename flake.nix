@@ -27,7 +27,11 @@
       inputs.home-manager.follows = "home-manager";
     };
     cli-of-life = {
-      url = "./sources/cli-of-life";
+      url = ./sources/cli-of-life;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    keal = {
+      url = ./sources/keal;
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

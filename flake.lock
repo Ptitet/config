@@ -52,11 +52,11 @@
         ]
       },
       "locked": {
-        "path": "./sources/cli-of-life",
+        "path": "sources/cli-of-life",
         "type": "path"
       },
       "original": {
-        "path": "./sources/cli-of-life",
+        "path": "sources/cli-of-life",
         "type": "path"
       },
       "parent": []
@@ -98,6 +98,22 @@
         "repo": "home-manager",
         "type": "github"
       }
+    },
+    "keal": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "path": "sources/keal",
+        "type": "path"
+      },
+      "original": {
+        "path": "sources/keal",
+        "type": "path"
+      },
+      "parent": []
     },
     "nixpkgs": {
       "locked": {
@@ -161,6 +177,7 @@
         "auto-cpufreq": "auto-cpufreq",
         "cli-of-life": "cli-of-life",
         "home-manager": "home-manager",
+        "keal": "keal",
         "nixpkgs": "nixpkgs",
         "otter-launcher": "otter-launcher",
         "zen-browser": "zen-browser"

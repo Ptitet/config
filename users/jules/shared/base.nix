@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs,
   ...
 }:
 {
@@ -31,5 +32,6 @@
     typst
     evince
     inputs.cli-of-life.packages."x86_64-linux".default
+    inputs.keal.packages."x86_64-linux".default
   ];
 }

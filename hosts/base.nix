@@ -1,5 +1,9 @@
 # Ultra basic config common to all my machines
-{ pkgs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 {
   nix.settings.experimental-features = [
     "nix-command"
@@ -14,15 +18,8 @@
     kernelPackages = pkgs.linuxPackages_latest;
   };
 
-  environment.systemPackages = with pkgs; [
-    wget
-    btop
-    fzf
-    sops
-    file
-    ripgrep
-    fd
-    tree
+  environment.systemPackages = [
+    inputs.agenix.packages."x86_64-linux".default
   ];
   environment.pathsToLink = [ "/share/zsh" ]; # https://mynixos.com/home-manager/option/programs.zsh.enableCompletion
 

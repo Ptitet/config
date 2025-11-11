@@ -11,6 +11,7 @@
     eog
     gimp
     libreoffice
+    adwaita-icon-theme
   ];
 
   services.gvfs.enable = true;

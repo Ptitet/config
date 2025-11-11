@@ -29,6 +29,4 @@
       bindkey "^H" backward-delete-word
     '';
   };
-
-  programs.direnv.enableZshIntegration = true;
 }

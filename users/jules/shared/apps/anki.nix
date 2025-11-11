@@ -14,7 +14,10 @@ in
     programs.anki = {
       enable = true;
       language = "fr_FR";
-      sync.autoSync = true;
+      sync = {
+        autoSync = true;
+        keyFile = config.age.secrets.anki-key.path;
+      };
       addons = with pkgs.ankiAddons; [
         (anki-connect.withConfig {
           config = {

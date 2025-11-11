@@ -6,5 +6,6 @@
     ./kitty.nix
     ./mega.nix
     ./anki.nix
+    ./otter-launcher.nix
   ];
 }

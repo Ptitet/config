@@ -1,20 +1,23 @@
-{ config, pkgs, ... }:
+{
+  pkgs,
+  inputs,
+  ...
+}:
 {
   imports = [
     ./shared/shell
     ./shared/cli/git.nix
+    inputs.agenix.homeManagerModules.default
   ];
 
-  xdg.configFile =
-    let
-      configs = builtins.attrNames (builtins.readDir ./config);
-      configPath = "${config.home.homeDirectory}/nixos/users/jules/config";
-      mapFn = name: {
-        inherit name;
-        value.source = config.lib.file.mkOutOfStoreSymlink "${configPath}/${name}";
+  age = {
+    secrets = {
+      anki-key = {
+        file = ../../secrets/anki-key.age;
+        path = "/tmp/secrets/anki-key";
       };
-    in
-    builtins.listToAttrs (map mapFn configs);
+    };
+  };
 
   programs = {
     fzf = {

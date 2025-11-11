@@ -1,6 +1,5 @@
 {
   pkgs,
-  inputs,
   ...
 }:
 {
@@ -11,11 +10,11 @@
 
   my.apps = {
     zen-browser.enable = true;
-    firefox.enable = false;
     zed.enable = true;
     kitty.enable = true;
     anki.enable = true;
-    # mega.enable = true;
+    mega.enable = true;
+    otter-launcher.enable = true;
   };
 
   my.services = {
@@ -29,7 +28,5 @@
     baobab
     discord
     fastfetch
-    inputs.otter-launcher.packages."x86_64-linux".default
-    # crudini # for the app module of otter-launcher
   ];
 }

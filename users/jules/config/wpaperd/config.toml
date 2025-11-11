@@ -1,0 +1,5 @@
+[default]
+duration = "1min"
+path = "/home/jules/wallpapers"
+queue-size = 20
+mode = "center"

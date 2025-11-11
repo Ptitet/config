@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   cfg = config.my.apps.mega;
 in
@@ -10,5 +15,9 @@ in
       enable = true;
       forceWayland = true;
     };
+
+    home.packages = with pkgs; [
+      megacmd
+    ];
   };
 }

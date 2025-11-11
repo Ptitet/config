@@ -20,10 +20,20 @@
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.darwin.follows = "";
+      inputs.home-manager.follows = "home-manager";
+    };
+    cli-of-life = {
+      url = "./sources/cli-of-life";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    inputs@{ nixpkgs, ... }:
+    inputs@{ nixpkgs, agenix, ... }:
     let
       nixosConfigurations = hosts: {
         nixosConfigurations = builtins.listToAttrs (
@@ -40,6 +50,7 @@
                   {
                     nixpkgs.config.allowUnfree = true;
                   }
+                  agenix.nixosModules.default
                 ];
               };
             }

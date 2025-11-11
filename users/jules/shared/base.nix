@@ -28,5 +28,8 @@
     baobab
     discord
     fastfetch
+    typst
+    evince
+    inputs.cli-of-life.packages."x86_64-linux".default
   ];
 }

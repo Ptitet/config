@@ -29,11 +29,5 @@
     };
   };
 
-  home.packages = with pkgs; [
-    typst
-    evince
-    inputs.cli-of-life.packages."x86_64-linux".default
-  ];
-
   programs.home-manager.enable = true; # Let Home Manager install and manage itself
 }

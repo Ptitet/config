@@ -11,24 +11,22 @@ in
   options.my.apps.zed.enable = lib.mkEnableOption "Enables zed";
 
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [ kdlfmt ]; # not available in path when put in extraPackages
     programs.zed-editor = {
       enable = true;
-      extraPackages =
-        with pkgs;
-        let
-          lsps = [
-            nixd # Nix lsp
-            nil # Nix lsp
-            package-version-server # package.json lsp
-            vscode-json-languageserver # json lsp
-            yaml-language-server # yaml lsp
-            tombi
-            tinymist
-          ];
-          formatters = [ nixfmt-rfc-style ];
-        in
-        lsps ++ formatters;
     };
+    home.packages = with pkgs;
+    let
+      lsps = [
+        nixd # Nix lsp
+        nil # Nix lsp
+        package-version-server # package.json lsp
+        vscode-json-languageserver # json lsp
+        yaml-language-server # yaml lsp
+        tombi
+        tinymist
+      ];
+      formatters = [ nixfmt-rfc-style kdlfmt ];
+    in
+    lsps ++ formatters;
   };
 }

@@ -5,5 +5,6 @@
     ./wpaperd.nix
     ./screensaver.nix
     ./xdg.nix
+    ./mako.nix
   ];
 }

@@ -22,6 +22,7 @@
     wpaperd.enable = true;
     waybar.enable = true;
     screensaver.enable = false;
+    mako.enable = true;
   };
 
   home.packages = with pkgs; [

@@ -5,5 +5,4 @@
   environment.systemPackages = with pkgs; [
     xwayland-satellite
   ];
-  xdg.portal.wlr.enable = true;
 }

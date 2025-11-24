@@ -2,6 +2,7 @@
 {
   pkgs,
   inputs,
+  lib,
   ...
 }:
 {
@@ -12,7 +13,7 @@
 
   boot = {
     loader = {
-      systemd-boot.enable = true; # Use systemd bootloader
+      systemd-boot.enable = lib.mkDefault true; # Use systemd bootloader
       efi.canTouchEfiVariables = true;
     };
     kernelPackages = pkgs.linuxPackages_latest;

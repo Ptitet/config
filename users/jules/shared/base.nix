@@ -14,7 +14,7 @@
     zed.enable = true;
     kitty.enable = true;
     anki.enable = true;
-    mega.enable = true;
+    mega.enable = false;
     otter-launcher.enable = true;
   };
 

@@ -45,6 +45,28 @@
         "type": "github"
       }
     },
+    "awww": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1763909054,
+        "narHash": "sha256-w1tPemnSoph8r5MM2DZyYyUfp02wXiL24+qwTupHmP0=",
+        "ref": "refs/heads/main",
+        "rev": "dd5dce09d5dac8fbfd0e88b54ac46c9e2156fd4b",
+        "revCount": 1314,
+        "type": "git",
+        "url": "https://codeberg.org/LGFae/awww"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://codeberg.org/LGFae/awww"
+      }
+    },
     "cli-of-life": {
       "inputs": {
         "nixpkgs": [
@@ -60,6 +82,22 @@
         "type": "path"
       },
       "parent": []
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1761588595,
+        "narHash": "sha256-XKUZz9zewJNUj46b4AJdiRZJAvSZ0Dqj2BNfXvFlJC4=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "f387cd2afec9419c8ee37694406ca490c3f34ee5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "type": "github"
+      }
     },
     "flake-parts": {
       "inputs": {
@@ -114,6 +152,26 @@
         "type": "path"
       },
       "parent": []
+    },
+    "minegrub": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1762539883,
+        "narHash": "sha256-GvlAAIpM/iZtl/EtI+LTzEsQ2qlUkex9i4xRUZXmadM=",
+        "owner": "Lxtharia",
+        "repo": "minegrub-theme",
+        "rev": "2fa2012472fbfcfea17b82655dd27456fa507ee7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Lxtharia",
+        "repo": "minegrub-theme",
+        "type": "github"
+      }
     },
     "nixpkgs": {
       "locked": {
@@ -175,12 +233,35 @@
       "inputs": {
         "agenix": "agenix",
         "auto-cpufreq": "auto-cpufreq",
+        "awww": "awww",
         "cli-of-life": "cli-of-life",
         "home-manager": "home-manager",
         "keal": "keal",
+        "minegrub": "minegrub",
         "nixpkgs": "nixpkgs",
         "otter-launcher": "otter-launcher",
         "zen-browser": "zen-browser"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "awww",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1761964689,
+        "narHash": "sha256-Zo3LQQDz+64EQ9zor/WmeNTFLoZkjmhp0UY3G0D3seE=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "63d22578600f70d293aede6bc737efef60ebd97f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "systems": {

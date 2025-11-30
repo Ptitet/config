@@ -90,10 +90,10 @@ binds {
 	XF86AudioMicMute repeat=false allow-when-locked=true {
 		spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"
 	}
-	XF86MonBrightnessUp allow-when-locked=true {
+	XF86MonBrightnessUp cooldown-ms=150 allow-when-locked=true {
 		spawn "brightnessctl" "-e" "set" "+5%"
 	}
-	XF86MonBrightnessDown allow-when-locked=true {
+	XF86MonBrightnessDown cooldown-ms=150 allow-when-locked=true {
 		spawn "brightnessctl" "-n" "-e" "set" "5%-"
 	}
 	Shift+XF86MonBrightnessUp allow-when-locked=true {

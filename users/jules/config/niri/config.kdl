@@ -319,10 +319,6 @@ binds {
 	Mod+Ctrl+Shift+WheelScrollUp {
 		move-column-left
 	}
-	// Switches focus between the current and the previous workspace.
-	Mod+Tab {
-		focus-workspace-previous
-	}
 	// Consume one window from the right to the bottom of the focused column.
 	Mod+Comma {
 		consume-window-into-column
@@ -543,6 +539,12 @@ hotkey-overlay {
 gestures {
 	hot-corners {
 		off
+	}
+}
+recent-windows {
+	open-delay-ms 300
+	highlight {
+		corner-radius 14
 	}
 }
 

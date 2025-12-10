@@ -26,6 +26,7 @@ in
           tombi
           tinymist
           ruff
+          vtsls
         ];
         formatters = [
           nixfmt-rfc-style

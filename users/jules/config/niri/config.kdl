@@ -121,7 +121,7 @@ binds {
 	XF86AudioPrev repeat=false allow-when-locked=true {
 		spawn "playerctl" "previous"
 	}
-	Mod+Alt+F11 repeat=false {
+	Mod+Alt+F11 repeat=false hotkey-overlay-title=null {
 		spawn "zsh" "-c" "kill -SIGUSR1 $(pidof waybar)"
 	}
 	Mod+TwoSuperior repeat=false {

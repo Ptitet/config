@@ -30,11 +30,17 @@ input {
 	focus-follows-mouse max-scroll-amount="10%"
 	disable-power-key-handling
 }
-output "eDP-1" {
+output "Samsung Display Corp. 0x4180 Unknown" {
 	position x=0 y=0
 }
-output "HDMI-A-1" {
-	position x=43 y=-1024
+output "Dell Inc. Dell AW3420DW H4PKTY2" {
+	position x=-760 y=-1440
+}
+output "Dell Inc. DELL P1917S 4T6C17790LWL" {
+	position x=320 y=-1024
+}
+output "eDP-1" {
+	position x=0 y=0
 }
 binds {
 	// Keys consist of modifiers separated by + signs, followed by an XKB key name

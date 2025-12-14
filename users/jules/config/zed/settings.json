@@ -151,12 +151,7 @@
 			"formatter": {
 				"external": {
 					"command": "kdlfmt",
-					"arguments": [
-						"format",
-						"--stdin",
-						"--config",
-						"/home/jules/.config/kdlfmt.kdl"
-					]
+					"arguments": ["format", "--stdin", "--config", "/home/jules/.config/kdlfmt.kdl"]
 				}
 			}
 		},
@@ -164,10 +159,7 @@
 			"formatter": {
 				"external": {
 					"command": "ocamlformat",
-					"arguments": [
-						"-",
-						"--impl"
-					]
+					"arguments": ["-", "--impl"]
 				}
 			}
 		},
@@ -176,12 +168,8 @@
 		}
 	},
 	"file_types": {
-		"JSONC": [
-			"bun.lock"
-		],
-		"Nix": [
-			"nix"
-		]
+		"JSONC": ["bun.lock"],
+		"Nix": ["nix"]
 	},
 	// ------------
 	// --- Misc ---

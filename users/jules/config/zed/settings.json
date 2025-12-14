@@ -189,6 +189,8 @@
 	"auto_update": false,
 	"auto_install_extensions": {
 		"basher": true,
+		"typst": true,
+		"ocaml": true,
 		"kdl": true,
 		"nix": true,
 		"toml": true

@@ -95,7 +95,7 @@
 	// --- Language settings ---
 	// -------------------------
 	"tab_size": 2,
-	"hard_tabs": false, // Language override not working on this
+	"hard_tabs": true,
 	"formatter": "language_server",
 	"format_on_save": "on",
 	"lsp": {
@@ -131,10 +131,8 @@
 	},
 	"languages": {
 		"JSONC": {
-			"auto_indent_on_paste": false,
-			"tab_size": 3,
-			"hard_tabs": true,
-			"show_wrap_guides": false
+			"tab_size": 2,
+			"formatter": "prettier"
 		},
 		"TypeScript": {
 			"language_servers": [
@@ -147,7 +145,7 @@
 			"inlay_hints": {
 				"enabled": true
 			},
-			"hard_tabs": false
+			"hard_tabs": true
 		},
 		"Kdl": {
 			"formatter": {

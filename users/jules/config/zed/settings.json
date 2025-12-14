@@ -135,10 +135,7 @@
 			"formatter": "prettier"
 		},
 		"TypeScript": {
-			"language_servers": [
-				"tsgo",
-				"vtsls"
-			],
+			"language_servers": ["tsgo"],
 			"always_treat_brackets_as_autoclosed": true
 		},
 		"Nix": {

@@ -1,0 +1,30 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+scroll-lines = 1
+cursorline = true
+bufferline = "multiple"
+color-modes = true
+trim-final-newlines = true
+trim-trailing-whitespace = true
+popup-border = "all"
+
+[editor.auto-save]
+focus-lost = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+
+[editor.whitespace.render]
+tab = "all"
+
+[keys.insert]
+"C-backspace" = "delete_word_backward"
+"C-ret" = "open_below"
+"C-S-ret" = "open_above"
+
+[keys.normal]
+"C-ret" = "open_below"
+"C-S-ret" = "open_above"

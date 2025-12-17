@@ -7,5 +7,6 @@
     ./mega.nix
     ./anki.nix
     ./otter-launcher.nix
+    ./helix.nix
   ];
 }

@@ -16,6 +16,7 @@
     anki.enable = true;
     mega.enable = false;
     otter-launcher.enable = true;
+    helix.enable = true;
   };
 
   my.services = {

@@ -12,6 +12,8 @@
     ../shared/packages
     ../shared/laptop.nix
 
+    ../shared/misc/mx-master.nix
+
     inputs.minegrub.nixosModules.default
   ];
 

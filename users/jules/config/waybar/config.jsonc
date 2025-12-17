@@ -7,6 +7,7 @@
     "clock"
   ],
   "modules-right": [
+    "niri/language",
     "wireplumber",
     "temperature",
     "network",
@@ -14,6 +15,10 @@
   ],
   "modifier-reset": "release",
   // Modules configuration
+  "niri/language": {
+    "format-fr": "",
+    "format-en": "en"
+  },
   "battery": {
     "states": {
       "10": 10,

@@ -20,7 +20,7 @@
       defaultApplications = {
         "image/png" = [ "org.gnome.eog.desktop" ];
         "image/jpeg" = [ "org.gnome.eog.desktop" ];
-        "application/pdf" = [ "evince.desktop" ];
+        "application/pdf" = [ "org.gnome.Evince.desktop" ];
         "x-scheme-handler/https" = [ "zen-twilight.desktop" ];
         "x-scheme-handler/http" = [ "zen-twilight.desktop" ];
       };

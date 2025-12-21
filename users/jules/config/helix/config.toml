@@ -10,6 +10,9 @@ trim-final-newlines = true
 trim-trailing-whitespace = true
 popup-border = "all"
 
+[editor.soft-wrap]
+enable = true
+
 [editor.auto-save]
 focus-lost = true
 

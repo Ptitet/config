@@ -27,6 +27,15 @@
       bindkey "^[[1;5C" forward-word
       bindkey "^[[3;5~" delete-word
       bindkey "^H" backward-delete-word
+
+      function Resume {
+        fg
+        zle push-input
+        BUFFER=""
+        zle accept-line
+      }
+      zle -N Resume
+      bindkey "^Z" Resume
     '';
   };
 }

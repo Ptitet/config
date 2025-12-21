@@ -18,9 +18,6 @@ in
     q = "exit";
     c = "clear";
     ff = "fastfetch";
-    bt = "bluetoothctl";
-    airpods = "bluetoothctl connect 98:A5:F9:0D:EB:CB";
-    # use = "nix-shell -p";
     zed = "zeditor";
     tp = "btop";
 

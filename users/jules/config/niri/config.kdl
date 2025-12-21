@@ -60,7 +60,8 @@ binds {
 	}
 	// Launcher
 	Mod+Space repeat=false hotkey-overlay-title="Launcher (otter-launcher)" {
-		spawn "kitty" "--class" "otter-launcher" "otter-launcher"
+		// spawn "kitty" "--class" "otter-launcher" "otter-launcher"
+		spawn "bash" "-c" "kitten @ --to unix:/tmp/otter-launcher resize-os-window --action toggle-visibility || kitten panel -o allow_remote_control=socket-only --listen-on unix:/tmp/otter-launcher --layer overlay --edge center-sized --lines 8 --columns 40 --move-to-active-monitor --focus-policy exclusive --app-id otter-launcher --hide-on-focus-loss otter-launcher"
 	}
 	// Frequently used programs
 	Mod+T repeat=false hotkey-overlay-title="Terminal (kitty)" {
@@ -537,6 +538,7 @@ window-rule {
 }
 environment {
 	ELECTRON_OZONE_PLATFORM_HINT "auto"
+	EDITOR "hx"
 }
 spawn-at-startup "wpaperd"
 spawn-at-startup "waybar"
@@ -554,4 +556,3 @@ recent-windows {
 		corner-radius 14
 	}
 }
-

@@ -104,6 +104,10 @@ in
               install_url = "https://addons.mozilla.org/firefox/downloads/latest/untrap-for-youtube/latest.xpi";
               installation_mode = "force_installed";
             };
+            "{506e023c-7f2b-40a3-8066-bc5deb40aebe}" = {
+              install_url = "https://addons.mozilla.org/firefox/downloads/latest/gesturify/latest.xpi";
+              installation_mode = "force_installed";
+            };
           };
 
           Preferences =

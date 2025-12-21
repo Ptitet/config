@@ -35,7 +35,7 @@ in
       strip_trailing_spaces = "always";
       enable_audio_bell = "no";
       window_padding_width = 5;
-      placement_strategy = "top-left";
+      # placement_strategy = "center";
       hide_window_decorations = "yes";
       tab_bar_style = "powerline";
       close_on_child_death = "yes";

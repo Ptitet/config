@@ -85,11 +85,29 @@ url_encode = true
 unbind_proc = true
 
 [[modules]]
-description = "niri window switcher"
-prefix = "sw"
+description = "manage outputs"
+prefix = "no"
 cmd = """
-	niri msg -j windows |
-  jq -r '.[] | select(.app_id != "otter-launcher") | (.id |tostring) + " [" + (.app_id) + "] " + (.title)' |
-  fzf --padding 1,2,0 --highlight-line --cycle --gutter " " --pointer " ~" --prompt '->' | awk 'RS=" " { print $1 }' |
-  xargs niri msg action focus-window --id
+  select_monitor() {
+    echo $(niri msg --json outputs | jq -r 'to_entries | map(.value.name + " -> " + .value.make + " " + .value.model) | join("\n")' | fzf --border --border-label " $1 " --reverse --highlight-line --cycle --info-command 'echo -e "[$FZF_POS/$FZF_TOTAL_COUNT]"' --gutter " " --prompt "-> " --pointer " ~" | cut -d' ' -f1)
+  }
+  action=$(echo "on\noff\nmirror" | fzf --reverse --padding 1,2,0 --highlight-line --cycle --info-command 'echo -e "[$FZF_POS/$FZF_TOTAL_COUNT]"' --gutter " " --prompt "-> " --pointer " ~")
+  case "$action" in
+    off|on)
+      monitor=$(select_monitor Choose)
+      niri msg output "$monitor" "$action"
+    ;;
+    mirror)
+      what=$(select_monitor What)
+      [ -z "$what" ] && exit
+      where=$(select_monitor Where)
+      [ -z "$where" ] && exit
+      niri msg action focus-monitor "$where"
+      setsid -f wl-mirror "$what"
+      sleep 0.1
+      mirror_id=$(niri msg --json windows | jq -r '.[] | select(.app_id == "at.yrlf.wl_mirror") | .id')
+      niri msg action focus-window --id "$mirror_id"
+      niri msg action fullscreen-window --id "$mirror_id"
+    ;;
+  esac
 """

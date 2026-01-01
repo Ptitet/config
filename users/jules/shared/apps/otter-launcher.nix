@@ -48,6 +48,7 @@ in
     home.packages = with pkgs; [
       dex
       inputs.otter-launcher.packages."x86_64-linux".default
+      wl-mirror
     ];
   };
 }

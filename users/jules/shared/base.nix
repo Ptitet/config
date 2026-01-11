@@ -33,6 +33,7 @@
     fastfetch
     typst
     evince
+    remarkable-mouse
     inputs.cli-of-life.packages."x86_64-linux".default
     inputs.keal.packages."x86_64-linux".default
     # inputs.awww.packages."x86_64-linux".default

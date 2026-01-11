@@ -3,5 +3,5 @@
   ...
 }:
 {
-  environment.systemPackages = [ pkgs.numworks-udev-rules ];
+  services.udev.packages = [ pkgs.numworks-udev-rules ];
 }

@@ -11,7 +11,7 @@
 
   my.apps = {
     zen-browser.enable = true;
-    zed.enable = true;
+    zed.enable = false;
     kitty.enable = true;
     anki.enable = true;
     mega.enable = false;

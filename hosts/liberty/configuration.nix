@@ -13,6 +13,7 @@
     ../shared/laptop.nix
 
     ../shared/misc/mx-master.nix
+    ../shared/misc/numworks.nix
 
     inputs.minegrub.nixosModules.default
   ];

@@ -6,10 +6,13 @@
   ...
 }:
 {
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
+  nix.settings = {
+    download-buffer-size = 500000000;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+  };
 
   boot = {
     loader = {

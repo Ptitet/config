@@ -3,4 +3,5 @@ let
 in
 {
   "anki-key.age".publicKeys = [ jules ];
+  "nas-vpn.age".publicKeys = [ jules ];
 }

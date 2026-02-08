@@ -38,6 +38,10 @@
         url = "github:Lxtharia/minegrub-theme";
         inputs.nixpkgs.follows = "nixpkgs";
     };
+    sysc-greet = {
+      url = "github:Nomadcxx/sysc-greet";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # awww = {
     #   url = "git+https://codeberg.org/LGFae/awww";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -45,7 +49,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, agenix, ... }:
+    inputs@{ nixpkgs, agenix, sysc-greet, ... }:
     let
       nixosConfigurations = hosts: {
         nixosConfigurations = builtins.listToAttrs (
@@ -63,6 +67,7 @@
                     nixpkgs.config.allowUnfree = true;
                   }
                   agenix.nixosModules.default
+                  sysc-greet.nixosModules.default
                 ];
               };
             }

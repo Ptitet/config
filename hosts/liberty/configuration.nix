@@ -21,6 +21,8 @@
   services.thermald.enable = false;
   programs.auto-cpufreq.enable = false;
 
+  my.greeter = "ly";
+
   networking.hostName = "liberty";
 
   boot.loader = {

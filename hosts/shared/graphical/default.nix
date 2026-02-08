@@ -1,6 +1,6 @@
 {
   imports = [
-    ./ly.nix
+    ./greeter.nix
     ./niri.nix
     ./packages.nix
     ./pipewire.nix

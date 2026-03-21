@@ -9,6 +9,13 @@ color-modes = true
 trim-final-newlines = true
 trim-trailing-whitespace = true
 popup-border = "all"
+auto-format = true
+end-of-line-diagnostics = "hint"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "file-modification-indicator", "read-only-indicator"]
+right = ["diagnostics", "file-indent-style", "total-line-numbers"]
+
 
 [editor.soft-wrap]
 enable = true
@@ -23,14 +30,29 @@ normal = "block"
 [editor.whitespace.render]
 tab = "all"
 
+[editor.lsp]
+auto-signature-help = false
+display-progress-messages = true
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "warning"
+
+
 [keys.insert]
 "C-backspace" = "delete_word_backward"
 "C-ret" = "open_below"
 "C-S-ret" = "open_above"
+"C-del" = "delete_word_forward"
+"C-space" = "signature_help"
 
 [keys.normal]
-"C-ret" = "open_below"
-"C-S-ret" = "open_above"
+"C-j" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+"C-k" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 "C-g" = [
   ":write-all",
   ":new",

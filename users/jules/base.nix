@@ -4,7 +4,7 @@
 {
   imports = [
     ./shared/shell
-    ./shared/cli/git.nix
+    ./shared/cli
   ];
 
   age = {

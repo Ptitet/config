@@ -2,6 +2,7 @@
   pkgs,
   inputs,
   lib,
+  config,
   ...
 }:
 {
@@ -35,7 +36,7 @@
   };
 
   services.thermald.enable = lib.mkDefault true;
-  environment.systemPackages = with pkgs; [
-    thermald
+  environment.systemPackages = lib.mkIf config.services.thermald.enable [
+    pkgs.thermald
   ];
 }

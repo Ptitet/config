@@ -18,8 +18,8 @@ in
     q = "exit";
     c = "clear";
     ff = "fastfetch";
-    zed = "zeditor";
     tp = "btop";
+    ts = "tailscale";
 
     # nixos-rebuild
     rbs = "sudo nixos-rebuild switch --flake ${flakeRoot}";

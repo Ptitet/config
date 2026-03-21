@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   config,
+  defaultHomeModules ? [ ],
 }:
 users:
 let
@@ -14,7 +15,11 @@ in
     extraSpecialArgs = { inherit inputs; };
     users = builtins.listToAttrs (
       map (
-        { name, ... }:
+        {
+          name,
+          extraHomeModules ? [ ],
+          ...
+        }:
         {
           inherit name;
           value = {
@@ -25,8 +30,9 @@ in
               [
                 ./${userdir}/base.nix
                 ./${userdir}/hosts/${hostname}
-                inputs.agenix.homeManagerModules.default
-              ];
+              ]
+              ++ defaultHomeModules
+              ++ extraHomeModules;
             home = {
               username = name;
               homeDirectory = "/home/${name}";
@@ -44,6 +50,7 @@ in
         description ? "",
         groups ? [ ],
         shell ? pkgs.bash,
+        ...
       }:
       {
         inherit name;

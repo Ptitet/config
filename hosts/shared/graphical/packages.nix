@@ -10,7 +10,7 @@
     wl-clipboard
     eog
     gimp
-    libreoffice
+    # libreoffice-still
     adwaita-icon-theme
   ];
 

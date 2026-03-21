@@ -5,7 +5,10 @@
   ...
 }:
 let
-  define-users = import ./define-users.nix { inherit inputs pkgs config; };
+  define-users = import ./define-users.nix {
+    inherit inputs pkgs config;
+    defaultHomeModules = [ inputs.agenix.homeManagerModules.default ];
+  };
 in
 define-users [
   {
@@ -16,5 +19,6 @@ define-users [
       "networkmanager"
     ];
     shell = pkgs.zsh;
+    extraHomeModules = [ inputs.try.homeModules.default ];
   }
 ]

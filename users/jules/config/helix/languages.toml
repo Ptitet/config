@@ -1,0 +1,6 @@
+[[language]]
+name = "ocaml"
+formatter = { command = "ocamlformat", args = ["-", "--name=%{buffer_name}", "--enable-outside-detected-project"] }
+
+[language-server.rust-analyzer.config.check]
+command = "clippy"

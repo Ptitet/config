@@ -9,5 +9,8 @@
       enable = true;
       openFirewall = true;
     };
+    sniffnet.enable = true;
   };
+
+  services.flatpak.enable = true;
 }

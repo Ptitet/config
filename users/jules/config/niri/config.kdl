@@ -74,7 +74,7 @@ binds {
 		spawn "zeditor"
 	}
 	Mod+F repeat=false hotkey-overlay-title="Web browser (Zen)" {
-		spawn "zen"
+		spawn "zen-twilight"
 	}
 	Mod+D repeat=false hotkey-overlay-title="Discord" {
 		spawn "discord"
@@ -125,9 +125,6 @@ binds {
 	}
 	Mod+Alt+F11 repeat=false hotkey-overlay-title=null {
 		spawn "zsh" "-c" "kill -SIGUSR1 $(pidof waybar)"
-	}
-	Mod+TwoSuperior repeat=false {
-		toggle-overview
 	}
 	Mod+C {
 		close-window
@@ -532,12 +529,11 @@ window-rule {
 	match app-id="screensaver"
 	open-fullscreen true
 }
-// Floats Bitwarden window from Zen
-window-rule {
-	match app-id="zen-twilight"
-	match title="Bitwarden"
-	open-floating true
-}
+// Floats Bitwarden window from Zen --- no worky cuz the initial window title is "Zen Twilight" :/
+// window-rule {
+// 	match app-id="zen-twilight" title="Extension : (Gestionnaire de mots de passe Bitwarden) - Bitwarden — Zen Twilight"
+// 	open-floating true
+// }
 window-rule {
 	geometry-corner-radius 10
 	clip-to-geometry true

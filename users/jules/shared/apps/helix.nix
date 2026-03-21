@@ -15,7 +15,7 @@ in
       ruff
       typescript-go
 
-      nixfmt-rfc-style
+      nixfmt
       kdlfmt
     ];
   };

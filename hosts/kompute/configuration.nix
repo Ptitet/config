@@ -9,7 +9,6 @@
     ../users.nix
 
     ../shared/laptop.nix
-    ../shared/vpn.nix
     ../shared/networking
     ../shared/packages
   ];

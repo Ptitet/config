@@ -21,7 +21,7 @@ in
       x11Support = false; # this is enabled by default but I am on Wayland
       settings = {
         # https://codeberg.org/fairyglade/ly/src/branch/master/res/config.ini
-        allow_empty_password = false;
+        allow_empty_password = config.my.security.howdy.enable; # Empty password allowed if Howdy is enabled
         animation = "colormix";
         asterisk = "0x2022";
         auth_fails = 2;

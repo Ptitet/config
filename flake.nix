@@ -38,20 +38,8 @@
         url = "github:Lxtharia/minegrub-theme";
         inputs.nixpkgs.follows = "nixpkgs";
     };
-    # sysc-greet = {
-    #   url = "github:Nomadcxx/sysc-greet";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     try = {
       url = "github:tobi/try";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # awww = {
-    #   url = "git+https://codeberg.org/LGFae/awww";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-    visage = {
-      url = "github:sovren-software/visage";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -91,7 +79,6 @@
       {
         name = "liberty";
         system = "x86_64-linux";
-        extraModules = [ visage.nixosModules.default ];
       }
     ];
 }

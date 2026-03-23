@@ -97,24 +97,6 @@
         "type": "github"
       }
     },
-    "flake-utils": {
-      "inputs": {
-        "systems": "systems_3"
-      },
-      "locked": {
-        "lastModified": 1731533236,
-        "narHash": "sha256-l0KFg5HjrsfsO/JpG+r7fRrqm12kzFHyUHqHCVpMMbI=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "11707dc2f618dd54ca8739b309ec4fc024de578b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "type": "github"
-      }
-    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -253,7 +235,6 @@
         "nixpkgs": "nixpkgs",
         "otter-launcher": "otter-launcher",
         "try": "try",
-        "visage": "visage",
         "zen-browser": "zen-browser"
       }
     },
@@ -287,21 +268,6 @@
         "type": "github"
       }
     },
-    "systems_3": {
-      "locked": {
-        "lastModified": 1681028828,
-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
-        "owner": "nix-systems",
-        "repo": "default",
-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-systems",
-        "repo": "default",
-        "type": "github"
-      }
-    },
     "try": {
       "inputs": {
         "flake-parts": "flake-parts_2",
@@ -323,27 +289,6 @@
         "type": "github"
       }
     },
-    "visage": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1773357305,
-        "narHash": "sha256-KNb8V8lyaeCzubjhbp/C/rOqf90LZ40hP/pJeB7p1go=",
-        "owner": "sovren-software",
-        "repo": "visage",
-        "rev": "78a34309a81c07f787ad7949753f116f88d3ce46",
-        "type": "github"
-      },
-      "original": {
-        "owner": "sovren-software",
-        "repo": "visage",
-        "type": "github"
-      }
-    },
     "zen-browser": {
       "inputs": {
         "home-manager": [
@@ -354,11 +299,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773737882,
-        "narHash": "sha256-P6k0BtT1/idYveVRdcwAZk8By9UjZW8XOMhSoS6wTBY=",
+        "lastModified": 1774103303,
+        "narHash": "sha256-ZKsQGY0D4DLe3071/RZSQHLqqmFvsA38PudjEvnPbZI=",
         "owner": "0xc000022070",
         "repo": "zen-browser-flake",
-        "rev": "a7f1db35d74faf04e5189b3a32f890186ace5c28",
+        "rev": "ae52b215dd66f73cb131106b7588f3a983617cee",
         "type": "github"
       },
       "original": {

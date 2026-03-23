@@ -57,7 +57,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, agenix, visage, ... }:
+    inputs@{ nixpkgs, agenix, home-manager, ... }:
     let
       nixosConfigurations = hosts: {
         nixosConfigurations = builtins.listToAttrs (
@@ -75,6 +75,7 @@
                     nixpkgs.config.allowUnfree = true;
                   }
                   agenix.nixosModules.default
+                  home-manager
                 ] ++ extraModules;
               };
             }

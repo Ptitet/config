@@ -1,11 +1,6 @@
 {
-  inputs,
-  ...
-}:
-{
   imports = [
     ./hardware-configuration.nix
-    inputs.home-manager.nixosModules.home-manager
     ../users.nix
 
     ../shared/laptop.nix

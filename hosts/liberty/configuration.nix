@@ -14,6 +14,8 @@
     ../shared/misc/mx-master.nix
     ../shared/misc/numworks.nix
 
+    ../shared/security/howdy.nix
+
     inputs.minegrub.nixosModules.default
   ];
 
@@ -21,6 +23,7 @@
   programs.auto-cpufreq.enable = false;
 
   my.greeter = "ly";
+  my.security.howdy.enable = true;
 
   networking.hostName = "liberty";
 

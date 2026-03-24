@@ -29,6 +29,7 @@ in
 
     # Fun because fun
     please = "sudo";
+    UwU = "yes UwU";
   };
   programs.zsh.siteFunctions = {
     nix-optimise = ''

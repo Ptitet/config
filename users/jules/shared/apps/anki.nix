@@ -16,7 +16,7 @@ in
       language = "fr_FR";
       sync = {
         autoSync = true;
-        keyFile = config.age.secrets.anki-key.path;
+        keyFile = "/run/user/1000/agenix/anki-key"; # Path hardcoded because the anki module cannot expand env vars
       };
       addons = with pkgs.ankiAddons; [
         (anki-connect.withConfig {

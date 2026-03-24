@@ -1,4 +1,5 @@
 {
+  config,
   ...
 }:
 {
@@ -9,9 +10,11 @@
 
   age = {
     secrets = {
-      anki-key = {
-        file = ../../secrets/anki-key.age;
-        path = "/tmp/secrets/anki-key";
+      anki-key.file = ../../secrets/anki-key;
+      ssh-config = {
+        file = ../../secrets/ssh-config;
+        name = "config";
+        path = "${config.home.homeDirectory}/.ssh/config";
       };
     };
   };

@@ -63,7 +63,7 @@
                     nixpkgs.config.allowUnfree = true;
                   }
                   agenix.nixosModules.default
-                  home-manager
+                  home-manager.nixosModules.default
                 ] ++ extraModules;
               };
             }

@@ -111,3 +111,18 @@ cmd = """
     ;;
   esac
 """
+
+[[modules]]
+description = "manage tailscale"
+prefix = "ts"
+cmd = """
+  action=$(echo "up\ndown\nstatus" | fzf --reverse --padding 1,2,0 --highlight-line --cycle --info-command 'echo -e "[$FZF_POS/$FZF_TOTAL_COUNT]"' --gutter " " --prompt "-> " --pointer " ~")
+  case "$action" in
+    up|down)
+      tailscale $action && notify-send "Tailscale is $action" || notify-send "Tailscale failed"
+    ;;
+    status)
+      tailscale status && notify-send "Tailscale est connecté" || notify-send "Tailscale est déconnecté"
+    ;;
+  esac
+"""

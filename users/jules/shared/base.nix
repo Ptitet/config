@@ -33,11 +33,6 @@
     };
   };
 
-  # programs.try = {
-  #   enable = true;
-  #   path = "~/Documents/Programmation/tries";
-  # };
-
   home.packages = with pkgs; [
     obsidian
     baobab
@@ -48,7 +43,5 @@
     remarkable-mouse
     inputs.cli-of-life.packages."x86_64-linux".default
     inputs.keal.packages."x86_64-linux".default
-    # inputs.try.packages."x86_64-linux".default
-    # inputs.awww.packages."x86_64-linux".default
   ];
 }

@@ -1,8 +1,4 @@
 {
-  inputs,
-  ...
-}:
-{
   imports = [
     ./hardware-configuration.nix
     ../users.nix
@@ -16,8 +12,6 @@
 
     ../shared/security/howdy.nix
     ../shared/ssh.nix
-
-    inputs.minegrub.nixosModules.default
   ];
 
   services.thermald.enable = false;

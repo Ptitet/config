@@ -15,6 +15,7 @@
     ../shared/misc/numworks.nix
 
     ../shared/security/howdy.nix
+    ../shared/ssh.nix
 
     inputs.minegrub.nixosModules.default
   ];

@@ -45,7 +45,7 @@
   };
 
   outputs =
-    inputs@{ nixpkgs, agenix, home-manager, ... }:
+    inputs@{ nixpkgs, agenix, home-manager, minegrub, ... }:
     let
       nixosConfigurations = hosts: {
         nixosConfigurations = builtins.listToAttrs (
@@ -79,6 +79,7 @@
       {
         name = "liberty";
         system = "x86_64-linux";
+        extraModules = [ minegrub.nixosModules.default ];
       }
     ];
 }

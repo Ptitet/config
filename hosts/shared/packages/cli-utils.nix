@@ -11,6 +11,8 @@
     file
     ripgrep
     tree
+    zip
+    unzip
   ];
 
   programs = {

@@ -12,6 +12,7 @@
     gimp
     # libreoffice-still
     adwaita-icon-theme
+    wev
   ];
 
   services.gvfs.enable = true;

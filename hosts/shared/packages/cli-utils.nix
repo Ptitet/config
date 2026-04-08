@@ -13,6 +13,7 @@
     tree
     zip
     unzip
+    libqalculate
   ];
 
   programs = {

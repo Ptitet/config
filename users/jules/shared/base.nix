@@ -26,6 +26,11 @@
     mako.enable = true;
   };
 
+  programs.eww = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
   my.cli = {
     try = {
       enable = true;
@@ -43,5 +48,6 @@
     remarkable-mouse
     inputs.cli-of-life.packages."x86_64-linux".default
     inputs.keal.packages."x86_64-linux".default
+    nmap
   ];
 }

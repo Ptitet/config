@@ -54,7 +54,7 @@ in
             SponsoredPocket = false;
             Snippets = true;
           };
-          GoToIntranetSiteForSingleWordEntryInAddressBar = true;
+          # GoToIntranetSiteForSingleWordEntryInAddressBar = true;
           HomePage = locked {
             StartPage = "previous-session";
           };

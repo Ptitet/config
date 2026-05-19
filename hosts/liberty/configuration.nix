@@ -4,6 +4,7 @@
     ../users.nix
 
     ../shared/networking
+    ../shared/print-n-scan.nix
     ../shared/packages
     ../shared/laptop.nix
 
@@ -19,6 +20,7 @@
 
   my.greeter = "ly";
   my.security.howdy.enable = true;
+  my.print-n-scan.enable = false;
 
   networking.hostName = "liberty";
 

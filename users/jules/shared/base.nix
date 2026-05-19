@@ -26,10 +26,7 @@
     mako.enable = true;
   };
 
-  programs.eww = {
-    enable = true;
-    enableZshIntegration = true;
-  };
+  programs.eww.enable = true;
 
   my.cli = {
     try = {

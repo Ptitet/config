@@ -1,15 +1,17 @@
 {
   programs.git = {
     enable = true;
-    userName = "Ptitet";
-    userEmail = "ptitet73@gmail.com";
-    aliases = {
-      s = "status";
-      lg = "!git log --decorate --oneline --graph --all";
-      a = "add";
-      c = "commit -m";
-    };
-    extraConfig = {
+    settings = {
+      aliases = {
+        s = "status";
+        lg = "!git log --decorate --oneline --graph --all";
+        a = "add";
+        c = "commit -m";
+      };
+      user = {
+        name = "Ptitet";
+        email = "ptitet73@gmail.com";
+      };
       pull.rebase = true;
       init.defaultBranch = true;
     };

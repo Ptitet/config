@@ -14,6 +14,7 @@ in
       tinymist
       ruff
       typescript-go
+      vscode-css-languageserver
 
       nixfmt
       kdlfmt

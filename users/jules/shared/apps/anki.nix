@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 let
@@ -14,25 +13,12 @@ in
     programs.anki = {
       enable = true;
       language = "fr_FR";
-      sync = {
-        autoSync = true;
-        keyFile = "/run/user/1000/agenix/anki-key"; # Path hardcoded because the anki module cannot expand env vars
+      profiles."User 1" = {
+        sync = {
+          autoSync = true;
+          keyFile = "/run/user/1000/agenix/anki-key"; # Path hardcoded because the anki module cannot expand env vars
+        };
       };
-      addons = with pkgs.ankiAddons; [
-        (anki-connect.withConfig {
-          config = {
-            apiKey = null;
-            apiLogPath = null;
-            webBindAddress = "127.0.0.1";
-            webBindPort = 8765;
-            webCorsOrigin = "http://localhost";
-            webCorsOriginList = [
-              "http://localhost"
-              "app://obsidian.md"
-            ];
-          };
-        })
-      ];
     };
   };
 }

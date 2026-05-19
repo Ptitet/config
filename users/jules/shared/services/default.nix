@@ -6,5 +6,6 @@
     ./screensaver.nix
     ./xdg.nix
     ./mako.nix
+    ./niri-dynamic-float.nix
   ];
 }

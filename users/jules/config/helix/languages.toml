@@ -2,5 +2,16 @@
 name = "ocaml"
 formatter = { command = "ocamlformat", args = ["-", "--name=%{buffer_name}", "--enable-outside-detected-project"] }
 
+[[language]]
+name = "xml"
+language-id = "xml"
+scope = "source.qrc"
+file-types = ["qrc"]
+grammar = "xml"
+
 [language-server.rust-analyzer.config.check]
 command = "clippy"
+
+[language-server.qmlls]
+command = "qmlls"
+args = ["-E"]

@@ -17,6 +17,8 @@ define-users [
     groups = [
       "wheel"
       "networkmanager"
+      "scanner"
+      "lp"
     ];
     shell = pkgs.zsh;
     extraHomeModules = [ inputs.try.homeModules.default ];

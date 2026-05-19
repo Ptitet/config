@@ -2,6 +2,7 @@
   imports = [
     ./bluetooth.nix
     ./tailscale.nix
+    ./ios-usb-tethering.nix
   ];
 
   networking = {

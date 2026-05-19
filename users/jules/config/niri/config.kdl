@@ -53,7 +53,7 @@ input {
 		scroll-factor 0.4
 	}
 	warp-mouse-to-focus mode="center-xy"
-	// focus-follows-mouse
+	focus-follows-mouse max-scroll-amount="20%"
 	disable-power-key-handling
 }
 
@@ -63,15 +63,14 @@ output "Samsung Display Corp. 0x4180 Unknown" {
 }
 output "Dell Inc. Dell AW3420DW H4PKTY2" {
 	position x=-760 y=-1440
+
+	layout {
+		default-column-width { proportion 0.5; }
+	}
 }
 output "Dell Inc. DELL P1917S 4T6C17790LWL" {
 	position x=320 y=-1024
 }
-output "eDP-1" {
-	position x=0 y=0
-	scale 1
-}
-
 
 binds {
 	// ------------------
@@ -185,7 +184,7 @@ binds {
 	// ---------------------------------
 	// --- Window size and placement ---
 	// ---------------------------------
-	Mod+R       repeat=false { switch-preset-column-width; }
+	Mod+R       repeat=false { switch-preset-column-width-back; }
 	Mod+Shift+R repeat=false { switch-preset-window-height; }
 	Mod+X                    { expand-column-to-available-width; }
 	Mod+C                    { center-visible-columns; }
@@ -196,12 +195,13 @@ binds {
 	// --- Misc ---
 	// ------------
 	Print                                     { screenshot; }
-	Mod+Alt+Print                             { screenshot-screen; }
-	Mod+Print                                 { screenshot-window; }
+	Mod+Alt+Print   repeat=false              { screenshot-screen; }
+	Mod+Print       repeat=false              { screenshot-window; }
 	Mod+Escape      allow-inhibiting=false    { toggle-keyboard-shortcuts-inhibit; }
 	Mod+Shift+E                               { quit; }
 	Mod+Shift+Comma hotkey-overlay-title=null { show-hotkey-overlay; }
 	Mod+Q           repeat=false              { close-window; }
+	Mod+TwoSuperior hotkey-overlay-title="Open overview"              { open-overview; }
 
 	// ----------------------------
 	// ---- Monitor management ----
@@ -229,9 +229,9 @@ layout {
 	empty-workspace-above-first
 	default-column-width { proportion 0.66667; }
 	focus-ring {
+		on
 		width 1
-		active-gradient from="#33ccffee" to="#00ff99ee" angle=45
-		inactive-color "#15aaccdc"
+		active-color "#fff8"
 	}
 	tab-indicator {
 	    place-within-column
@@ -240,6 +240,15 @@ layout {
         width 3
         gaps-between-tabs 2
         corner-radius 2
+	}
+	background-color "transparent"
+}
+
+
+overview {
+	workspace-shadow {
+		softness 80
+		spread 30
 	}
 }
 
@@ -268,12 +277,34 @@ window-rule {
 	default-column-width { proportion 0.333; }
 	focus-ring { off; }
 }
-// Floats Bitwarden window from Zen --- no worky cuz the initial window title is "Zen Twilight" :/
-// window-rule {
-// 	match app-id="zen-twilight" title="Extension : (Gestionnaire de mots de passe Bitwarden) - Bitwarden — Zen Twilight"
-// 	open-floating true
-// }
+window-rule {
+	match title="AppLoad - PC emulator"
+	default-column-width { proportion 0.5; }
+}
 window-rule {
 	geometry-corner-radius 10
 	clip-to-geometry true
 }
+window-rule {
+	match app-id="kitty"
+	draw-border-with-background false
+}
+// window-rule {
+// 	match is-active=false
+// 	background-effect {
+// 		// saturation 0.8
+// 		noise 0.15
+// 	}
+// }
+
+
+layer-rule {
+	match namespace="wpaperd-eDP-1"
+	place-within-backdrop true
+}
+
+// blur {
+// 	offset 1
+// 	passes 4
+// 	noise 0.05
+// }

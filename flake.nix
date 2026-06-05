@@ -30,27 +30,43 @@
       url = ./sources/cli-of-life;
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    keal = {
-      url = ./sources/keal;
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # keal = {
+    #   url = ./sources/keal;
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     minegrub = {
-        url = "github:Lxtharia/minegrub-theme";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:Lxtharia/minegrub-theme";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     try = {
       url = "github:tobi/try";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    eden = {
+      # pinned because takes 20+ minutes to build
+      url = "github:Daaboulex/eden-nix/9c0887b4abd952cecebd3ec3e4697bd9fe3eb354";
+      inputs.nixpkgs.url = "github:NixOS/nixpkgs/3084f14a926eba4cddf8c95eca1d81435c5cf3cd";
+    };
   };
 
   outputs =
-    inputs@{ nixpkgs, agenix, home-manager, minegrub, ... }:
+    inputs@{
+      nixpkgs,
+      agenix,
+      home-manager,
+      minegrub,
+      eden,
+      ...
+    }:
     let
       nixosConfigurations = hosts: {
         nixosConfigurations = builtins.listToAttrs (
           map (
-            { name, system, extraModules ? [] }:
+            {
+              name,
+              system,
+              extraModules ? [ ],
+            }:
             {
               inherit name;
               value = nixpkgs.lib.nixosSystem {
@@ -64,7 +80,8 @@
                   }
                   agenix.nixosModules.default
                   home-manager.nixosModules.default
-                ] ++ extraModules;
+                ]
+                ++ extraModules;
               };
             }
           ) hosts
@@ -79,7 +96,10 @@
       {
         name = "liberty";
         system = "x86_64-linux";
-        extraModules = [ minegrub.nixosModules.default ];
+        extraModules = [
+          minegrub.nixosModules.default
+          eden.nixosModules.default
+        ];
       }
     ];
 }

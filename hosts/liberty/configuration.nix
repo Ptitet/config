@@ -18,6 +18,8 @@
   services.thermald.enable = false;
   programs.auto-cpufreq.enable = false;
 
+  # programs.eden.enable = true;
+
   my.greeter = "ly";
   my.security.howdy.enable = true;
   my.print-n-scan.enable = false;

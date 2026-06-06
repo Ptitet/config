@@ -1,6 +1,7 @@
 // -*- mode: jsonc -*-
 {
   // "reload_style_on_change": true,
+  "layer": "overlay",
   "spacing": 10,
   "modules-left": [],
   "modules-center": [

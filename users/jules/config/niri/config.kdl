@@ -161,6 +161,16 @@ binds {
 	// -----------------------
 	// --- Mouse movements ---
 	// -----------------------
+
+	Mod+WheelScrollUp { set-window-width "+2%"; }
+	Mod+WheelScrollDown { set-window-width "-2%"; }
+	Mod+Shift+WheelScrollUp { set-window-height "+2%"; }
+	Mod+Shift+WheelScrollDown { set-window-height "-2%"; }
+	Mod+TouchpadScrollUp cooldown-ms=100 { set-window-width "+2%"; }
+	Mod+TouchpadScrollDown cooldown-ms=100 { set-window-width "-2%"; }
+	Mod+Shift+TouchpadScrollUp cooldown-ms=100 { set-window-height "+2%"; }
+	Mod+Shift+TouchpadScrollDown cooldown-ms=100 { set-window-height "-2%"; }
+
 	// Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
 	// Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
 	// Mod+Ctrl+WheelScrollDown cooldown-ms=150 { move-column-to-workspace-down; }

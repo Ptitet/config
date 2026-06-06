@@ -19,6 +19,7 @@ right = ["diagnostics", "file-indent-style", "total-line-numbers"]
 
 [editor.soft-wrap]
 enable = true
+wrap-indicator = " "
 
 [editor.auto-save]
 focus-lost = true

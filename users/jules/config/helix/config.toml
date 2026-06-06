@@ -42,6 +42,9 @@ skip-levels = 1
 cursor-line = "warning"
 other-lines = "warning"
 
+[editor.smart-tab]
+enable = false
+
 
 [keys.insert]
 "C-backspace" = "delete_word_backward"

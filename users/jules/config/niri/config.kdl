@@ -142,21 +142,21 @@ binds {
 	Mod+Shift+L      { focus-column-last; }
 	Mod+Shift+Ctrl+H { move-column-to-first; }
 	Mod+Shift+Ctrl+L { move-column-to-last; }
-	Mod+Ctrl+Alt+J   { move-column-to-workspace-down; }
-	Mod+Ctrl+Alt+K   { move-column-to-workspace-up; }
+	// Mod+Ctrl+Alt+J   { move-column-to-workspace-down; }
+	// Mod+Ctrl+Alt+K   { move-column-to-workspace-up; }
 
-	Mod+Shift+Page_Down {
-		move-workspace-down
-	}
-	Mod+Shift+Page_Up {
-		move-workspace-up
-	}
-	Mod+Shift+U {
-		move-workspace-down
-	}
-	Mod+Shift+I {
-		move-workspace-up
-	}
+	Mod+Alt+H        { focus-monitor-left; }
+	Mod+Alt+J        { focus-monitor-down; }
+	Mod+Alt+K        { focus-monitor-up; }
+	Mod+Alt+L        { focus-monitor-right; }
+	Mod+Alt+N        { focus-monitor-next; }
+	Mod+Alt+P        { focus-monitor-previous; }
+	Mod+Alt+Ctrl+H   { move-window-to-monitor-left; }
+	Mod+Alt+Ctrl+J   { move-window-to-monitor-down; }
+	Mod+Alt+Ctrl+K   { move-window-to-monitor-up; }
+	Mod+Alt+Ctrl+L   { move-window-to-monitor-right; }
+	Mod+Alt+Ctrl+N   { move-window-to-monitor-next; }
+	Mod+Alt+Ctrl+P   { move-window-to-monitor-previous; }
 
 	// -----------------------
 	// --- Mouse movements ---

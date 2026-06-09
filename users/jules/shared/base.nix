@@ -24,6 +24,7 @@
     waybar.enable = true;
     screensaver.enable = false;
     mako.enable = true;
+    vicinae.enable =  true;
   };
 
   programs.eww.enable = true;

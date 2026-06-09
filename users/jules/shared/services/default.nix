@@ -7,5 +7,6 @@
     ./xdg.nix
     ./mako.nix
     ./niri-dynamic-float.nix
+    ./vicinae.nix
   ];
 }

@@ -24,9 +24,7 @@
       enable = true;
       enableZshIntegration = true;
     };
-    chromium = {
-      enable = true;
-    };
+    chromium.enable = true;
   };
 
   programs.home-manager.enable = true; # Let Home Manager install and manage itself

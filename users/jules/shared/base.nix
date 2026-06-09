@@ -49,5 +49,6 @@
     nmap
     cbonsai
     fortune-kind
+    sqlitestudio # ou sqlitebrowser
   ];
 }

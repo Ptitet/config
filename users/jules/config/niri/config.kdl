@@ -87,7 +87,6 @@ binds {
 	// ----------------------------------
 	Mod+T repeat=false hotkey-overlay-title="Terminal (kitty)"        { spawn "kitty"; }
 	Mod+E repeat=false hotkey-overlay-title="File manager (Nautilus)" { spawn "nautilus"; }
-	Mod+Z repeat=false hotkey-overlay-title="Text editor (Zed)"       { spawn "zeditor"; }
 	Mod+F repeat=false hotkey-overlay-title="Web browser (Zen)"       { spawn "zen-twilight"; }
 	Mod+D repeat=false hotkey-overlay-title="Discord"                 { spawn "discord"; }
 	Mod+O repeat=false hotkey-overlay-title="Obsidian"                { spawn "obsidian"; }

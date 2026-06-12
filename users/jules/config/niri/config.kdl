@@ -95,9 +95,9 @@ binds {
 	// -----------------
 	// ---- Actions ----
 	// -----------------
-	Mod+Shift+S repeat=false hotkey-overlay-title="Rescan for WiFi" {
-		spawn-sh "notify-send 'Scanning for WiFi...'; nmcli device wifi rescan"
-	}
+	// Mod+Shift+S repeat=false hotkey-overlay-title="Rescan for WiFi" {
+	// 	spawn-sh "notify-send 'Scanning for WiFi...'; nmcli device wifi rescan"
+	// }
 
 	// -------------------------------------------------
 	// ---- Hardware control (sound and brightness) ----

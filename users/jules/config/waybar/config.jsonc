@@ -111,7 +111,7 @@
     "thermal-zone": 0,
     "critical-threshold": 80,
     "format": "{temperatureC}°C",
-    "tooltip-format": "Open btop++",
+    "tooltip-format": "Ouvrir btop++",
     "on-click": "kitty btop",
   },
   "wireplumber": {
@@ -135,7 +135,7 @@
     "format-connected": " {num_connections}",
     "on-click": "bluetoothctl power off",
     "on-click-middle": "bluetoothctl power on",
-    "tooltip-format-on": "Disable",
-    "tooltip-format-off": "Enable"
+    "tooltip-format-on": "Désactiver",
+    "tooltip-format-off": "Activer"
   }
 }

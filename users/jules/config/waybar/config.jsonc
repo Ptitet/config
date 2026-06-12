@@ -130,12 +130,13 @@
   },
   "bluetooth": {
     "controller": "hci0",
+    "format-disabled": "󰂲",
     "format-off": "󰂲",
     "format-on": "󰂯",
     "format-connected": " {num_connections}",
-    "on-click": "bluetoothctl power off",
-    "on-click-middle": "bluetoothctl power on",
+    "on-click": "bluetoothctl power off; rfkill block bluetooth",
+    "on-click-middle": "rfkill unblock bluetooth; bluetoothctl power on",
     "tooltip-format-on": "Désactiver",
-    "tooltip-format-off": "Activer"
+    "tooltip-format-disabled": "Activer"
   }
 }

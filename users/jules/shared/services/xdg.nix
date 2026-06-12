@@ -17,13 +17,20 @@
     };
     mimeApps = {
       enable = true;
-      defaultApplications = {
-        "image/png" = [ "org.gnome.eog.desktop" ];
-        "image/jpeg" = [ "org.gnome.eog.desktop" ];
-        "application/pdf" = [ "org.gnome.Evince.desktop" ];
-        "x-scheme-handler/https" = [ "zen-twilight.desktop" ];
-        "x-scheme-handler/http" = [ "zen-twilight.desktop" ];
-      };
+      defaultApplications =
+        let
+          image = "org.gnome.eog.desktop";
+          browser = "zen-twilight.desktop";
+          pdf = "org.gnome.Evince.desktop";
+        in
+        {
+          "image/png" = [ image ];
+          "image/jpeg" = [ image ];
+          "image/bmp" = [ image ];
+          "application/pdf" = [ pdf ];
+          "x-scheme-handler/https" = [ browser ];
+          "x-scheme-handler/http" = [ browser ];
+        };
     };
   };
 }

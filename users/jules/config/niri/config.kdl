@@ -212,6 +212,7 @@ binds {
 	Mod+Shift+Comma hotkey-overlay-title=null { show-hotkey-overlay; }
 	Mod+Q           repeat=false              { close-window; }
 	// Mod+TwoSuperior hotkey-overlay-title="Open overview" { open-overview; } // No worky :-,)
+	Mod+S           hotkey-overlay-title="Emoji picker"  { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
 
 	// ----------------------------
 	// ---- Monitor management ----

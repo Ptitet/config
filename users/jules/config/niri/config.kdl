@@ -58,17 +58,17 @@ input {
 }
 
 
-output "Samsung Display Corp. 0x4180 Unknown" {
+output "Samsung Display Corp. 0x4180 Unknown" { // internal screen
 	position x=0 y=0
 }
-output "Dell Inc. Dell AW3420DW H4PKTY2" {
+output "Dell Inc. Dell AW3420DW H4PKTY2" { // ultrawide
 	position x=-760 y=-1440
 
 	layout {
 		default-column-width { proportion 0.5; }
 	}
 }
-output "Dell Inc. DELL P1917S 4T6C17790LWL" {
+output "Dell Inc. DELL P1917S 4T6C17790LWL" { // square shit
 	position x=320 y=-1024
 }
 
@@ -162,13 +162,13 @@ binds {
 	// --- Mouse movements ---
 	// -----------------------
 
-	Mod+WheelScrollUp { set-window-width "+2%"; }
-	Mod+WheelScrollDown { set-window-width "-2%"; }
-	Mod+Shift+WheelScrollUp { set-window-height "+2%"; }
-	Mod+Shift+WheelScrollDown { set-window-height "-2%"; }
-	Mod+TouchpadScrollUp cooldown-ms=100 { set-window-width "+2%"; }
-	Mod+TouchpadScrollDown cooldown-ms=100 { set-window-width "-2%"; }
-	Mod+Shift+TouchpadScrollUp cooldown-ms=100 { set-window-height "+2%"; }
+	Mod+WheelScrollUp                            { set-window-width "+2%"; }
+	Mod+WheelScrollDown                          { set-window-width "-2%"; }
+	Mod+Shift+WheelScrollUp                      { set-window-height "+2%"; }
+	Mod+Shift+WheelScrollDown                    { set-window-height "-2%"; }
+	Mod+TouchpadScrollUp cooldown-ms=100         { set-window-width "+2%"; }
+	Mod+TouchpadScrollDown cooldown-ms=100       { set-window-width "-2%"; }
+	Mod+Shift+TouchpadScrollUp cooldown-ms=100   { set-window-height "+2%"; }
 	Mod+Shift+TouchpadScrollDown cooldown-ms=100 { set-window-height "-2%"; }
 
 	// Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }

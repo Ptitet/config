@@ -1,9 +1,14 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 let
   cfg = config.my.apps.helix;
 in
 {
-  options.my.apps.helix.enable = lib.mkEnableOption "Enables Helix";
+  options.my.apps.helix.enable = lib.mkEnableOption "Helix";
 
   config = lib.mkIf cfg.enable {
     programs.helix.enable = true;
@@ -17,7 +22,6 @@ in
       vscode-css-languageserver
 
       nixfmt
-      kdlfmt
     ];
   };
 }

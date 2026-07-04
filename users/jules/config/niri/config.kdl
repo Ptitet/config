@@ -1,5 +1,6 @@
 spawn-at-startup "waybar"
 spawn-at-startup "wpaperd"
+spawn-sh-at-startup "niri msg action switch-layout 1" // Switch to french layout on startup
 
 
 prefer-no-csd
@@ -32,15 +33,14 @@ recent-windows {
 input {
 	keyboard {
 		xkb {
-			// You can set rules, model, layout, variant and options.
-			// For more information, see xkeyboard-config(7).
-			// For example:
-			// options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-			layout "fr,us"
-			options "grp:alt_shift_toggle,caps:swapescape"
+			// us layout first to be able to play old games such as Hotline Miami that have issues with
+			// Wayland layout handling or idk.
+			// Note the `spawn-sh-at-startup` which sets the fr layout automagically
+			layout "us,fr"
+			options "grp:lctrl_lwin_toggle,caps:escape_shifted_capslock"
 		}
 		numlock
-		track-layout "window"
+		// track-layout "window" // Disabled for old games
 	}
 	touchpad {
 		tap

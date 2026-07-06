@@ -20,9 +20,12 @@
 
   # programs.eden.enable = true;
 
-  my.greeter = "ly";
-  my.security.howdy.enable = true;
-  my.print-n-scan.enable = false;
+  my = {
+    greeter = "ly";
+    security.howdy.enable = true;
+    print-n-scan.enable = true;
+    mx-master.enable = false;
+  };
 
   networking.hostName = "liberty";
 

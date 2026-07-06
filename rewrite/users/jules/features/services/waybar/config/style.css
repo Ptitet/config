@@ -1,0 +1,30 @@
+* {
+    font-family: "FiraCode Nerd Font";
+    font-size: 0.9rem;
+    color: #444;
+}
+
+#battery {
+    margin-right: 12px;
+}
+
+#battery.charging {
+    color: #2ce629;
+}
+
+#wireplumber.muted {
+    color: #bbb;
+}
+
+#workspaces {
+    padding: 1px;
+}
+
+#workspaces button {
+    margin: 1px;
+    padding: 2px 4px;
+}
+
+#workspaces button.active {
+    background-color: #ddd;
+}

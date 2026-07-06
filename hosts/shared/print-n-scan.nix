@@ -21,5 +21,6 @@ in
       };
       udev.packages = [ pkgs.sane-airscan ];
     };
+    systemd.services.avahi-daemon.wantedBy = lib.mkForce [];
   };
 }

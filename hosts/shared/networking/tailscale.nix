@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   services.tailscale.enable = true;
   networking = {
@@ -9,7 +9,11 @@
     };
   };
   systemd = {
-    services.tailscaled.serviceConfig.Environment = [ "TS_DEBUG_FIREWALL_MODE=nftables" ];
+
+    services.tailscaled = {
+      wantedBy = lib.mkForce [ ];
+      serviceConfig.Environment = [ "TS_DEBUG_FIREWALL_MODE=nftables" ];
+    };
     network.wait-online.enable = false;
   };
   boot.initrd.systemd.network.wait-online.enable = false;

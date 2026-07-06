@@ -15,5 +15,5 @@
     wev
   ];
 
-  services.gvfs.enable = true;
+  # services.gvfs.enable = true;
 }

@@ -5,6 +5,7 @@
 
   programs = {
     steam.enable = true;
+    gamescope.enable = true;
     localsend = {
       enable = true;
       openFirewall = true;

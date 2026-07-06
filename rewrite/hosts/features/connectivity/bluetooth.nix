@@ -1,0 +1,16 @@
+{ pkgs, ... }:
+{
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = false;
+    settings = {
+      General = {
+        Enable = "Source,Sink,Media,Socket";
+        Experimental = true;
+      };
+    };
+  };
+  environment.systemPackages = with pkgs; [
+    bluetui
+  ];
+}

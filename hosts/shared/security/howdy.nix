@@ -11,10 +11,6 @@ in
       control = "sufficient";
       settings.core.detection_notice = true;
     };
-
-    services.linux-enable-ir-emitter = {
-      enable = true;
-    };
-
+    services.linux-enable-ir-emitter.enable = true;
   };
 }

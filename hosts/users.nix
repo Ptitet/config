@@ -19,6 +19,8 @@ define-users [
       "networkmanager"
       "scanner"
       "lp"
+      "input"
+      "uinput"
     ];
     shell = pkgs.zsh;
     extraHomeModules = [ inputs.try.homeModules.default ];

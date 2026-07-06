@@ -1,48 +1,27 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../users.nix
 
-    ../shared/networking
-    ../shared/print-n-scan.nix
-    ../shared/packages
-    ../shared/laptop.nix
+    # Features
 
-    ../shared/misc/mx-master.nix
-    ../shared/misc/numworks.nix
+    ../features/graphical/pipewire.nix
+    ../features/graphical/ly.nix
+    ../features/graphical/niri.nix
+    ../features/graphical/packages.nix
 
-    ../shared/security/howdy.nix
-    ../shared/ssh.nix
+    ../features/connectivity/bluetooth.nix
+    ../features/connectivity/tailscale.nix
+    ../features/connectivity/ios-usb-tethering.nix
+    ../features/connectivity/print-n-scan.nix
+    ../features/connectivity/ssh.nix
+
+    ../features/misc/numworks.nix
+    # ../features/misc/minegrub.nix
+
+    ../features/howdy.nix
   ];
 
-  services.thermald.enable = false;
-  programs.auto-cpufreq.enable = false;
-
-  # programs.eden.enable = true;
-
-  my = {
-    greeter = "ly";
-    security.howdy.enable = true;
-    print-n-scan.enable = true;
-    mx-master.enable = false;
-  };
-
-  networking.hostName = "liberty";
-
-  boot.loader = {
-    systemd-boot.enable = false;
-    grub = {
-      enable = true;
-      efiSupport = true;
-      configurationLimit = 3;
-      device = "nodev";
-      minegrub-theme = {
-        enable = true;
-        splash = "I use NixOS btw...";
-        boot-options-count = 3;
-      };
-    };
-  };
+  # features.minegrub.splash = "Spent too much time on this!";
 
   system.stateVersion = "25.05"; # Don't touch that
 }

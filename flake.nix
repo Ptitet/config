@@ -11,11 +11,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-    otter-launcher = {
-      url = "github:kuokuo123/otter-launcher";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
     auto-cpufreq = {
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,14 +21,6 @@
       inputs.darwin.follows = "";
       inputs.home-manager.follows = "home-manager";
     };
-    cli-of-life = {
-      url = ./sources/cli-of-life;
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    # keal = {
-    #   url = ./sources/keal;
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     minegrub = {
       url = "github:Lxtharia/minegrub-theme";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -42,64 +29,40 @@
       url = "github:tobi/try";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    eden = {
-      # pinned because takes 20+ minutes to build
-      url = "github:Daaboulex/eden-nix/9c0887b4abd952cecebd3ec3e4697bd9fe3eb354";
-      inputs.nixpkgs.url = "github:NixOS/nixpkgs/3084f14a926eba4cddf8c95eca1d81435c5cf3cd";
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
-    inputs@{
-      nixpkgs,
-      agenix,
-      home-manager,
-      minegrub,
-      eden,
-      ...
-    }:
+    inputs:
     let
-      nixosConfigurations = hosts: {
-        nixosConfigurations = builtins.listToAttrs (
-          map (
-            {
-              name,
-              system,
-              extraModules ? [ ],
-            }:
-            {
-              inherit name;
-              value = nixpkgs.lib.nixosSystem {
-                inherit system;
-                specialArgs = { inherit inputs; };
-                modules = [
-                  ./hosts/base.nix
-                  ./hosts/${name}/configuration.nix
-                  {
-                    nixpkgs.config.allowUnfree = true;
-                  }
-                  agenix.nixosModules.default
-                  home-manager.nixosModules.default
-                ]
-                ++ extraModules;
-              };
-            }
-          ) hosts
-        );
+      lib = import ./lib.nix { inherit inputs; flakeRoot = "/home/jules/nixos"; };
+      jules = {
+        name = "jules";
+        groups = [ "wheel" ];
+        shell = pkgs: pkgs.zsh;
       };
     in
-    nixosConfigurations [
+    lib.nixosConfigurations [
       {
         name = "kompute";
         system = "x86_64-linux";
+        plateform = "laptop";
+        users = [ jules ];
       }
       {
         name = "liberty";
         system = "x86_64-linux";
-        extraModules = [
-          minegrub.nixosModules.default
-          eden.nixosModules.default
-        ];
+        plateform = "laptop";
+        users = [ jules ];
+      }
+      {
+        name = "black-thing";
+        system = "x86_64-linux";
+        plateform = "desktop";
+        users = [ jules ];
       }
     ];
 }

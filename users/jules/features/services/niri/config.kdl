@@ -211,7 +211,7 @@ binds {
 	Mod+Shift+E                                          { quit; }
 	Mod+Shift+Comma hotkey-overlay-title=null            { show-hotkey-overlay; }
 	Mod+Q           repeat=false                         { close-window; }
-	// Mod+TwoSuperior hotkey-overlay-title="Open overview" { open-overview; } // No worky :-,)
+	Mod+Grave       hotkey-overlay-title="Open overview" { toggle-overview; }
 	Mod+S           hotkey-overlay-title="Emoji picker"  { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
 
 	// ----------------------------

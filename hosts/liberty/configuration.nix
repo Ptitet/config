@@ -19,6 +19,7 @@
     # ../features/misc/minegrub.nix
 
     ../features/howdy.nix
+    ../features/power.nix
   ];
 
   # features.minegrub.splash = "Spent too much time on this!";

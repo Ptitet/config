@@ -33,6 +33,10 @@
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wattage = {
+      url = "github:v81d/wattage";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

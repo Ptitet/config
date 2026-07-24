@@ -19,5 +19,9 @@
       settings.SKIP_HOST_UPDATE = true;
     };
     fastfetch.enable = true;
+    btop = {
+      enable = true;
+      package = pkgs.btop-btop-rocm;
+    };
   };
 }

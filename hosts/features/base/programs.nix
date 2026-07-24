@@ -24,5 +24,6 @@
     file
     ripgrep
     libqalculate
+    btop
   ];
 }

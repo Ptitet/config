@@ -1,9 +1,6 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    obsidian
     baobab
-    discord
-    fastfetch
     typst
     evince
     nmap
@@ -14,4 +11,13 @@
     # bottles # build fails as of 17/07
     vlc
   ];
+
+  programs = {
+    obsidian.enable = true;
+    discord = {
+      enable = true;
+      settings.SKIP_HOST_UPDATE = true;
+    };
+    fastfetch.enable = true;
+  };
 }

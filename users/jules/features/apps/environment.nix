@@ -11,7 +11,7 @@
     fortune-kind
     sqlitestudio
     qbittorrent
-    bottles
+    # bottles # build fails as of 17/07
     vlc
   ];
 }

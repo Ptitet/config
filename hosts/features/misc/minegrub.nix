@@ -8,16 +8,16 @@ let
   splash = config.features.minegrub.splash;
 in
 {
+  imports = [
+    inputs.minegrub.nixosModules.default
+  ];
+
   options.features.minegrub.splash = lib.mkOption {
     description = "Minegrub splash";
     default = "I use NixOS btw...";
   };
 
   config = {
-    imports = [
-      inputs.minegrub.nixosModules.default
-    ];
-
     boot.loader = {
       systemd-boot.enable = false;
       grub = {

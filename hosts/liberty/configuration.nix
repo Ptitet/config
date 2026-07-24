@@ -16,13 +16,14 @@
     ../features/connectivity/ssh.nix
 
     ../features/misc/numworks.nix
-    # ../features/misc/minegrub.nix
+    ../features/misc/gaming.nix
+    ../features/misc/minegrub.nix
 
     ../features/howdy.nix
     ../features/power.nix
   ];
 
-  # features.minegrub.splash = "Spent too much time on this!";
+  features.minegrub.splash = "Spent too much time on this!";
 
   system.stateVersion = "25.05"; # Don't touch that
 }

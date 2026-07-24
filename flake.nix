@@ -26,7 +26,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     try = {
-      url = "github:tobi/try";
+      url = "github:tobi/try-cli";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {

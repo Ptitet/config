@@ -1,11 +1,14 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./nautilus.nix
+  ];
+
   environment.systemPackages = with pkgs; [
     libnotify
     playerctl
     brightnessctl
     kitty
-    nautilus
     wl-clipboard
     eog
     gimp

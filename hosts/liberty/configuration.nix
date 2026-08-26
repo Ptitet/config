@@ -18,6 +18,7 @@
     ../features/misc/numworks.nix
     ../features/misc/gaming.nix
     ../features/misc/minegrub.nix
+    ../features/misc/llama-cpp.nix
 
     ../features/howdy.nix
     ../features/power.nix

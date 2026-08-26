@@ -21,7 +21,7 @@
     fastfetch.enable = true;
     btop = {
       enable = true;
-      package = pkgs.btop-btop-rocm;
+      package = pkgs.btop-rocm;
     };
   };
 }

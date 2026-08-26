@@ -45,7 +45,7 @@
       lib = import ./lib.nix { inherit inputs; flakeRoot = "/home/jules/nixos"; };
       jules = {
         name = "jules";
-        groups = [ "wheel" ];
+        groups = [ "wheel" "networkmanager" ];
         shell = pkgs: pkgs.zsh;
       };
     in

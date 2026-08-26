@@ -203,15 +203,16 @@ binds {
 	// ------------
 	// --- Misc ---
 	// ------------
-	Print                                                { screenshot; }
-	Mod+Alt+Print   repeat=false                         { screenshot-screen; }
-	Mod+Print       repeat=false                         { screenshot-window; }
-	Mod+Escape      allow-inhibiting=false               { toggle-keyboard-shortcuts-inhibit; }
-	Mod+Shift+E                                          { quit; }
-	Mod+Shift+Comma hotkey-overlay-title=null            { show-hotkey-overlay; }
-	Mod+Q           repeat=false                         { close-window; }
-	Mod+Grave       hotkey-overlay-title="Open overview" { toggle-overview; }
-	Mod+S           hotkey-overlay-title="Emoji picker"  { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
+	Print                                                 { screenshot; }
+	Mod+Alt+Print   repeat=false                          { screenshot-screen; }
+	Mod+Print       repeat=false                          { screenshot-window; }
+	Mod+Escape      allow-inhibiting=false                { toggle-keyboard-shortcuts-inhibit; }
+	Mod+Shift+E                                           { quit; }
+	Mod+Shift+Comma hotkey-overlay-title=null             { show-hotkey-overlay; }
+	Mod+Q           repeat=false                          { close-window; }
+	Mod+Grave       hotkey-overlay-title="Open overview"  { toggle-overview; }
+	Mod+S           hotkey-overlay-title="Emoji picker"   { spawn "vicinae" "vicinae://launch/core/search-emojis"; }
+	Mod+N           hotkey-overlay-title="Next wallpaper" { spawn-sh "wpaperctl next"; }
 
 	// ----------------------------
 	// ---- Monitor management ----

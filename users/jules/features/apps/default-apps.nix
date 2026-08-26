@@ -16,6 +16,7 @@
           "image/png" = [ image ];
           "image/jpeg" = [ image ];
           "image/bmp" = [ image ];
+          "image/heic" = [ image ];
           "application/pdf" = [ pdf ];
           "x-scheme-handler/http" = [ browser ];
           "x-scheme-handler/https" = [ browser ];

@@ -22,6 +22,7 @@ let
           };
         };
       }) users;
+      backupFileExtension = "bak";
     };
     users.users = mapToAttrs (
       {

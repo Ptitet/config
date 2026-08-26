@@ -1,0 +1,10 @@
+[gestures.right.up]
+action = "command"
+cmd = "brightnessctl -e set 5%+"
+
+[gestures.right.down]
+action = "command"
+cmd = "brightnessctl -n -e set 5%-"
+
+[zones]
+right_width = 0.03

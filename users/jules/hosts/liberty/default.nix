@@ -12,6 +12,7 @@
     ../../features/services/wallpaper
     ../../features/services/mako
     ../../features/services/niri
+    ../../features/services/bezel
   ];
 
   home.stateVersion = "25.05";

@@ -20,6 +20,7 @@
     ../features/misc/gaming.nix
     ../features/misc/minegrub.nix
     ../features/misc/llama-cpp.nix
+    ../features/misc/uinput.nix
 
     ../features/howdy.nix
     ../features/power.nix

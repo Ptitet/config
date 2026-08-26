@@ -4,7 +4,7 @@ spawn-sh-at-startup "niri msg action switch-layout 1" // Switch to french layout
 
 
 prefer-no-csd
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Photos/Captures d'écran/%Y-%m-%d %H-%M-%S.png"
 clipboard { disable-primary; }
 hotkey-overlay { skip-at-startup; hide-not-bound; }
 animations { slowdown 0.7; }

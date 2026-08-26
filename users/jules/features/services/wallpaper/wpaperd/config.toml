@@ -1,5 +1,5 @@
 [default]
 duration = "1min"
-path = "/home/jules/.local/share/wallpapers"
+path = "/home/jules/Photos/Fonds d'écran"
 queue-size = 20
 mode = "center"

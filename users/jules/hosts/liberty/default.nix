@@ -9,7 +9,7 @@
     ../../features/cli/try.nix
     ../../features/services/launchers/vicinae
     ../../features/services/waybar
-    ../../features/services/wpaperd
+    ../../features/services/wallpaper
     ../../features/services/mako
     ../../features/services/niri
   ];

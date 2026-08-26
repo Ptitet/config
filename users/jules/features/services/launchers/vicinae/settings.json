@@ -47,6 +47,11 @@
             "connectionToggleable": false
          }
       },
+      "@dagimg-dot/store.vicinae.wifi-commander": {
+         "preferences": {
+            "network-cli-tool": "nmcli"
+         }
+      },
       "browser-extension": {
          "enabled": false
       },

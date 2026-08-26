@@ -8,6 +8,7 @@
     ../features/graphical/ly.nix
     ../features/graphical/niri.nix
     ../features/graphical/packages.nix
+    ../features/graphical/flatpak.nix
 
     ../features/connectivity/bluetooth.nix
     ../features/connectivity/tailscale.nix

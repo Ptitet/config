@@ -1,5 +1,4 @@
 spawn-at-startup "waybar"
-spawn-at-startup "wpaperd"
 spawn-sh-at-startup "niri msg action switch-layout 1" // Switch to french layout on startup
 
 

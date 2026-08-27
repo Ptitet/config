@@ -26,5 +26,6 @@
     libqalculate
     btop
     witr
+    dig
   ];
 }

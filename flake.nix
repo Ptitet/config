@@ -37,6 +37,10 @@
       url = "github:v81d/wattage";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    bezel = {
+      url = "github:Indra55/bezel";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -45,7 +49,12 @@
       lib = import ./lib.nix { inherit inputs; flakeRoot = "/home/jules/nixos"; };
       jules = {
         name = "jules";
-        groups = [ "wheel" "networkmanager" ];
+        groups = [
+          "wheel"
+          "networkmanager"
+          "input" # for Bezel
+          "uinput" # for Bezel
+        ];
         shell = pkgs: pkgs.zsh;
       };
     in

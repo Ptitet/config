@@ -6,5 +6,18 @@ cmd = "brightnessctl -e set 5%+"
 action = "command"
 cmd = "brightnessctl -n -e set 5%-"
 
+[gestures.left.up]
+action = "command"
+cmd = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1"
+
+[gestures.left.down]
+action = "command"
+cmd = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+
+[gestures.left.tap]
+action = "command"
+cmd = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+
 [zones]
 right_width = 0.03
+left_width = 0.03

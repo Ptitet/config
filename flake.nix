@@ -46,7 +46,10 @@
   outputs =
     inputs:
     let
-      lib = import ./lib.nix { inherit inputs; flakeRoot = "/home/jules/nixos"; };
+      lib = import ./lib.nix {
+        inherit inputs;
+        flakeRoot = "/home/jules/nixos";
+      };
       jules = {
         name = "jules";
         groups = [

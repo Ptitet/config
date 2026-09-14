@@ -5,7 +5,7 @@ pkgs: with pkgs; [
   vscode-json-languageserver
   tinymist
   ruff
-  typescript-go
+  typescript
   vscode-css-languageserver
 
   nixfmt

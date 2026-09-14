@@ -3,7 +3,6 @@
     baobab
     typst
     evince
-    nmap
     cbonsai
     fortune-kind
     sqlitestudio

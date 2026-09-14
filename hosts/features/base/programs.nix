@@ -27,5 +27,7 @@
     btop
     witr
     dig
+    zip
+    unzip
   ];
 }

@@ -5,7 +5,7 @@
     evince
     cbonsai
     fortune-kind
-    letos
+    sqlitestudio
     qbittorrent
     # bottles # build fails as of 17/07
     vlc

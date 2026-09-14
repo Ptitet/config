@@ -29,5 +29,6 @@
     dig
     zip
     unzip
+    scooter
   ];
 }

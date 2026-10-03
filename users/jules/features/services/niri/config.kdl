@@ -193,12 +193,12 @@ binds {
 	// ---------------------------------
 	// --- Window size and placement ---
 	// ---------------------------------
-	Mod+R       repeat=false { switch-preset-column-width-back; }
-	Mod+Shift+R repeat=false { switch-preset-window-height; }
-	Mod+X                    { expand-column-to-available-width; }
-	Mod+C                    { center-visible-columns; }
-	Mod+V       repeat=false { toggle-window-floating; }
-	Mod+Shift+V repeat=false { switch-focus-between-floating-and-tiling; }
+	Mod+R       repeat=false                                 { switch-preset-column-width-back; }
+	Mod+Shift+R repeat=false                                 { switch-preset-window-height; }
+	Mod+X                                                    { expand-column-to-available-width; }
+	Mod+C       hotkey-overlay-title="Center focused window" { center-window; }
+	Mod+V       repeat=false                                 { toggle-window-floating; }
+	Mod+Shift+V repeat=false                                 { switch-focus-between-floating-and-tiling; }
 
 	// ------------
 	// --- Misc ---

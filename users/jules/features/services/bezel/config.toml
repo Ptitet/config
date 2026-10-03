@@ -1,23 +1,41 @@
-[gestures.right.up]
-action = "command"
-cmd = "brightnessctl -e set 5%+"
-
-[gestures.right.down]
-action = "command"
-cmd = "brightnessctl -n -e set 5%-"
-
-[gestures.left.up]
-action = "command"
-cmd = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+ --limit 1"
-
-[gestures.left.down]
-action = "command"
-cmd = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-
-[gestures.left.tap]
+[[bindings]]
+zone = "left"
+fingers = 1
+gesture = "tap"
 action = "command"
 cmd = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
+
+[[bindings]]
+zone = "left"
+fingers = 1
+gesture = "slide_up"
+action = "command"
+cmd = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%+ --limit 1"
+step_distance = 0.01
+
+[[bindings]]
+zone = "left"
+fingers = 1
+gesture = "slide_down"
+action = "command"
+cmd = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 1%-"
+step_distance = 0.01
+
+[[bindings]]
+zone = "right"
+fingers = 1
+gesture = "slide_up"
+action = "command"
+cmd = "brightnessctl -e set 1%+"
+
+[[bindings]]
+zone = "right"
+fingers = 1
+gesture = "slide_down"
+action = "command"
+cmd = "brightnessctl -n -e set 1%-"
+
 [zones]
-right_width = 0.03
-left_width = 0.03
+right_width = 0.05
+left_width = 0.05

@@ -15,12 +15,6 @@
       url = "github:AdnanHodzic/auto-cpufreq";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.darwin.follows = "";
-      inputs.home-manager.follows = "home-manager";
-    };
     minegrub = {
       url = "github:Lxtharia/minegrub-theme";
       inputs.nixpkgs.follows = "nixpkgs";

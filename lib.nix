@@ -65,7 +65,6 @@ in
               inherit users;
               hostname = name;
             })
-            inputs.agenix.nixosModules.default
             inputs.home-manager.nixosModules.default
           ];
         };

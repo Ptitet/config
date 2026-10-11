@@ -2,6 +2,7 @@
 {
   imports = [
     ./nautilus.nix
+    ./localsend.nix
   ];
 
   environment.systemPackages = with pkgs; [

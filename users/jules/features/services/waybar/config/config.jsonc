@@ -135,7 +135,7 @@
     "format-on": "󰂯",
     "format-connected": " {num_connections}",
     "on-click": "bluetoothctl power off; rfkill block bluetooth",
-    "on-click-middle": "rfkill unblock bluetooth; bluetoothctl power on",
+    "on-click-right": "rfkill unblock bluetooth; bluetoothctl power on",
     "tooltip-format-on": "Désactiver",
     "tooltip-format-disabled": "Activer"
   }
